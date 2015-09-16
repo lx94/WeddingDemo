@@ -20,6 +20,7 @@
 		C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0731BA91E3B006E9775 /* JHBForum.storyboard */; };
 		C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */; };
 		C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */; };
+		C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBHomePage.storyboard; sourceTree = "<group>"; };
 		C76628EC1BA948EE00E11F12 /* JHBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomeViewController.h; sourceTree = "<group>"; };
 		C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomeViewController.m; sourceTree = "<group>"; };
+		C76628F21BA94F9700E11F12 /* JHBForumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBForumTableViewController.h; sourceTree = "<group>"; };
+		C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBForumTableViewController.m; sourceTree = "<group>"; };
 		DC57337F79B2E6D4C6CFBB25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +109,9 @@
 		C729B0381BA91593006E9775 /* WeddingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C76628F11BA94DC700E11F12 /* Category */,
+				C76628F01BA94DA800E11F12 /* Views */,
+				C76628EF1BA94D8500E11F12 /* Model */,
 				C729B0631BA915C1006E9775 /* Other */,
 				C729B0621BA9159E006E9775 /* Controllers */,
 				C729B0491BA91593006E9775 /* Images.xcassets */,
@@ -185,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				C729B0731BA91E3B006E9775 /* JHBForum.storyboard */,
+				C76628F21BA94F9700E11F12 /* JHBForumTableViewController.h */,
+				C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */,
 			);
 			name = "论坛";
 			sourceTree = "<group>";
@@ -211,6 +219,27 @@
 				C729B06D1BA91DD3006E9775 /* JHBMe.storyboard */,
 			);
 			name = "我";
+			sourceTree = "<group>";
+		};
+		C76628EF1BA94D8500E11F12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C76628F01BA94DA800E11F12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C76628F11BA94DC700E11F12 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		F2F6A28CCD304DEC16A77B05 /* Pods */ = {
@@ -362,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C729B03F1BA91593006E9775 /* AppDelegate.m in Sources */,
+				C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */,
 				C729B0421BA91593006E9775 /* WeddingDemo.xcdatamodeld in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
 				C729B03C1BA91593006E9775 /* main.m in Sources */,
