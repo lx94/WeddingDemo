@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/Protocol/BSCollectionViewCellFactory.h

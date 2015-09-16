@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/Factory/BSAlbumTableViewCellFactory.h

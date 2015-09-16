@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>462933E6-0DEA-402E-BA82-3D366FF73BA0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WeddingDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D60C1FF1929E7BD1307EF01677A8B32221041452</key>
+		<string>ssh://github.com/lx94/WeddingDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WeddingDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D60C1FF1929E7BD1307EF01677A8B32221041452</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/lx94/WeddingDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D60C1FF1929E7BD1307EF01677A8B32221041452</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D60C1FF1929E7BD1307EF01677A8B32221041452</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeddingDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

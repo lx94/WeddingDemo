@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/View/BSAlbumCell.h

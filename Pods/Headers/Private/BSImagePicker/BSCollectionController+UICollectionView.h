@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/Category/BSCollectionController/BSCollectionController+UICollectionView.h

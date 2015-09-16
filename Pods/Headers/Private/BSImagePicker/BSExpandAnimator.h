@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/Animator/BSExpandAnimator.h

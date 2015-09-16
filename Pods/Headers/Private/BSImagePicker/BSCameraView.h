@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/View/BSCameraView.h

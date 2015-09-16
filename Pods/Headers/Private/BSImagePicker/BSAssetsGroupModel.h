@@ -1,0 +1,1 @@
+../../../BSImagePicker/BSImagePicker/Model/BSAssetsGroupModel.h
