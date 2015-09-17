@@ -7,30 +7,112 @@
         <!--我-->
         <scene sceneID="pfY-sK-vm6">
             <objects>
-                <tableViewController title="我" id="NvY-GF-ND6" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wGN-uu-3Q1">
+                <tableViewController title="我" id="NvY-GF-ND6" customClass="JHBMeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="leL-Ur-4rV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xnh-MM-WVY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="MKH-Sa-6v5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xnh-MM-WVY" id="gwx-m7-MB3">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MKH-Sa-6v5" id="oqL-mA-Zhm">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="NvY-GF-ND6" id="kBJ-mN-WWS"/>
-                            <outlet property="delegate" destination="NvY-GF-ND6" id="AhE-q2-wdE"/>
+                            <outlet property="dataSource" destination="NvY-GF-ND6" id="Sme-PX-3H8"/>
+                            <outlet property="delegate" destination="NvY-GF-ND6" id="Spe-HK-efc"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我" id="PAy-37-z2u"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="H5e-rF-iG4" kind="show" identifier="toFavourate" id="BWS-1F-88D"/>
+                        <segue destination="f4F-ip-nYY" kind="show" identifier="toCateGory" id="j4n-yc-pMO"/>
+                        <segue destination="cnJ-Qc-MHN" kind="show" identifier="toOrder" id="nuP-TP-fsU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZR-Kx-qWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213.5" y="409.5"/>
+        </scene>
+        <!--收藏-->
+        <scene sceneID="4YC-XQ-CGm">
+            <objects>
+                <viewController title="收藏" id="H5e-rF-iG4" customClass="JHBFavourateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fQ7-0L-fBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="n1l-uu-van"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T8K-gV-vTz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbt-Nq-L0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758.5" y="961.5"/>
+        </scene>
+        <!--订单-->
+        <scene sceneID="84q-5B-dl1">
+            <objects>
+                <viewController title="订单" id="cnJ-Qc-MHN" customClass="JHBOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xlr-fJ-Qkw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmi-iD-LP6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gPi-ho-zJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3K-Ae-VMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196.5" y="1277.5"/>
+        </scene>
+        <!--分类-->
+        <scene sceneID="j6Q-sV-mgD">
+            <objects>
+                <viewController title="分类" id="f4F-ip-nYY" customClass="JHBCategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HZn-km-WO5"/>
+                        <viewControllerLayoutGuide type="bottom" id="WQv-AG-eYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tXD-UA-KHl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uo5-68-qNM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yrY-xg-hpJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yrY-xg-hpJ" id="JhV-fe-gyY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="NvY-GF-ND6" kind="show" identifier="toMePage" id="PZx-nK-KQF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nX0-Q0-96D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732.5" y="-386.5"/>
         </scene>
         <!--我-->
         <scene sceneID="ahC-iA-rRq">
@@ -50,4 +132,7 @@
             <point key="canvasLocation" x="-291" y="410"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PZx-nK-KQF"/>
+    </inferredMetricsTieBreakers>
 </document>

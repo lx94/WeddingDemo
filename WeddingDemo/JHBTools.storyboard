@@ -5,34 +5,6 @@
     </dependencies>
     <scenes>
         <!--工具-->
-        <scene sceneID="e7L-kI-MLz">
-            <objects>
-                <tableViewController title="工具" id="87O-un-6n6" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zxi-gO-liA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="T0U-oI-fOA">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T0U-oI-fOA" id="GNB-Zp-hx8">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="87O-un-6n6" id="l12-hS-MrZ"/>
-                            <outlet property="delegate" destination="87O-un-6n6" id="V0l-or-J3g"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="工具" id="Y0F-hj-s5R"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n7J-BT-vFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118.5" y="392.5"/>
-        </scene>
-        <!--工具-->
         <scene sceneID="Qlv-uR-ZfU">
             <objects>
                 <navigationController storyboardIdentifier="toolsnav" title="工具" id="qfL-Ej-Kfx" sceneMemberID="viewController">
@@ -42,12 +14,122 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="87O-un-6n6" kind="relationship" relationship="rootViewController" id="pvx-2E-qRZ"/>
+                        <segue destination="rQR-4N-7zW" kind="relationship" relationship="rootViewController" id="411-Co-rKf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2H-ZD-Ldq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-382" y="393"/>
+        </scene>
+        <!--结婚工具-->
+        <scene sceneID="wZf-pB-M68">
+            <objects>
+                <viewController id="rQR-4N-7zW" customClass="JHBToolsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EbZ-hc-1W5"/>
+                        <viewControllerLayoutGuide type="bottom" id="GY7-tF-Egk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZKT-4K-Npz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="结婚工具" id="9bN-Us-Acr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="1lc-Lk-moP" kind="show" identifier="toSeating" id="YBV-Hs-EPa"/>
+                        <segue destination="Cha-T8-2nZ" kind="show" identifier="toLoveJourney" id="BiL-iN-Vx3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxE-vY-Dga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.5" y="392.5"/>
+        </scene>
+        <!--座位安排-->
+        <scene sceneID="Rnc-K9-Emx">
+            <objects>
+                <viewController title="座位安排" id="1lc-Lk-moP" customClass="JHBToolsSeatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ONv-ro-mv2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OiK-Ls-Fkw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KO4-qo-Utk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="宾客席位" id="yQM-7j-LhC"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="Nc8-ef-pfT" kind="show" identifier="toAddSeating" id="AfX-ZK-3Ha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C82-E4-dOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673.5" y="392.5"/>
+        </scene>
+        <!--添加席位-->
+        <scene sceneID="iFp-uf-r4h">
+            <objects>
+                <viewController id="Nc8-ef-pfT" customClass="JHBToolsAddSeatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNE-ip-aNh"/>
+                        <viewControllerLayoutGuide type="bottom" id="e4r-5x-2A5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eeT-rN-Gtf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加席位" id="DYL-GQ-FjK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpl-aB-TYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152.5" y="392.5"/>
+        </scene>
+        <!--爱情故事-->
+        <scene sceneID="mDH-lc-2po">
+            <objects>
+                <viewController title="爱情故事" id="Cha-T8-2nZ" customClass="JHBToolsLoveJourneyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2YO-Pk-c4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="MW6-sU-qyy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jfu-V8-2RT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="恋爱旅程" id="9Gi-UK-UlG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="0Rn-Ti-Nkh" kind="show" identifier="toOurStory" id="MOj-3O-iMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9r-19-dzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673.5" y="1206.5"/>
+        </scene>
+        <!--爱情故事-->
+        <scene sceneID="eRC-oQ-Yqf">
+            <objects>
+                <viewController id="0Rn-Ti-Nkh" customClass="JHBToolsOurStoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eS1-dR-rIt"/>
+                        <viewControllerLayoutGuide type="bottom" id="9q7-IW-pEp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XUR-ve-Ya8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="爱情故事" id="pr5-vz-kvN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-lM-Ypn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152.5" y="1206.5"/>
         </scene>
     </scenes>
 </document>

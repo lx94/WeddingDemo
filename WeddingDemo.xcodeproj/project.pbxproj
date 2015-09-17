@@ -14,13 +14,25 @@
 		C729B04A1BA91593006E9775 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C729B0491BA91593006E9775 /* Images.xcassets */; };
 		C729B04D1BA91593006E9775 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C729B04B1BA91593006E9775 /* LaunchScreen.xib */; };
 		C729B0591BA91593006E9775 /* WeddingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C729B0581BA91593006E9775 /* WeddingDemoTests.m */; };
-		C729B06E1BA91DD3006E9775 /* JHBMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B06D1BA91DD3006E9775 /* JHBMe.storyboard */; };
 		C729B0701BA91DE3006E9775 /* JHBTools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B06F1BA91DE3006E9775 /* JHBTools.storyboard */; };
 		C729B0721BA91E0F006E9775 /* JHBTrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0711BA91E0F006E9775 /* JHBTrade.storyboard */; };
 		C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0731BA91E3B006E9775 /* JHBForum.storyboard */; };
 		C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */; };
 		C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */; };
 		C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */; };
+		C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */; };
+		C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */; };
+		C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */; };
+		C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */; };
+		C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */; };
+		C7A65D5C1BAAD4F300B5CBA5 /* JHBFavourateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */; };
+		C7A65D5D1BAAD4F300B5CBA5 /* JHBOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */; };
+		C7A65D681BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D5F1BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m */; };
+		C7A65D691BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D611BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m */; };
+		C7A65D6A1BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D631BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m */; };
+		C7A65D6B1BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D651BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m */; };
+		C7A65D6C1BAAD58D00B5CBA5 /* JHBToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D671BAAD58D00B5CBA5 /* JHBToolsViewController.m */; };
+		C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +59,6 @@
 		C729B0521BA91593006E9775 /* WeddingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeddingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C729B0571BA91593006E9775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C729B0581BA91593006E9775 /* WeddingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeddingDemoTests.m; sourceTree = "<group>"; };
-		C729B06D1BA91DD3006E9775 /* JHBMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBMe.storyboard; sourceTree = "<group>"; };
 		C729B06F1BA91DE3006E9775 /* JHBTools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBTools.storyboard; sourceTree = "<group>"; };
 		C729B0711BA91E0F006E9775 /* JHBTrade.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBTrade.storyboard; sourceTree = "<group>"; };
 		C729B0731BA91E3B006E9775 /* JHBForum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBForum.storyboard; sourceTree = "<group>"; };
@@ -56,6 +67,30 @@
 		C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomeViewController.m; sourceTree = "<group>"; };
 		C76628F21BA94F9700E11F12 /* JHBForumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBForumTableViewController.h; sourceTree = "<group>"; };
 		C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBForumTableViewController.m; sourceTree = "<group>"; };
+		C7A65D4A1BAAC81200B5CBA5 /* JHBMeFavourateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeFavourateView.h; sourceTree = "<group>"; };
+		C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeFavourateView.m; sourceTree = "<group>"; };
+		C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHBMeFavourateView.xib; sourceTree = "<group>"; };
+		C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBMe.storyboard; sourceTree = "<group>"; };
+		C7A65D511BAAD4A600B5CBA5 /* JHBMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeTableViewController.h; sourceTree = "<group>"; };
+		C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeTableViewController.m; sourceTree = "<group>"; };
+		C7A65D551BAAD4CF00B5CBA5 /* JHBCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBCategoryViewController.h; sourceTree = "<group>"; };
+		C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBCategoryViewController.m; sourceTree = "<group>"; };
+		C7A65D581BAAD4F300B5CBA5 /* JHBFavourateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBFavourateViewController.h; sourceTree = "<group>"; };
+		C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBFavourateViewController.m; sourceTree = "<group>"; };
+		C7A65D5A1BAAD4F300B5CBA5 /* JHBOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBOrderViewController.h; sourceTree = "<group>"; };
+		C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBOrderViewController.m; sourceTree = "<group>"; };
+		C7A65D5E1BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsAddSeatingViewController.h; sourceTree = "<group>"; };
+		C7A65D5F1BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsAddSeatingViewController.m; sourceTree = "<group>"; };
+		C7A65D601BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsLoveJourneyViewController.h; sourceTree = "<group>"; };
+		C7A65D611BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsLoveJourneyViewController.m; sourceTree = "<group>"; };
+		C7A65D621BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsOurStoryViewController.h; sourceTree = "<group>"; };
+		C7A65D631BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsOurStoryViewController.m; sourceTree = "<group>"; };
+		C7A65D641BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsSeatingViewController.h; sourceTree = "<group>"; };
+		C7A65D651BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsSeatingViewController.m; sourceTree = "<group>"; };
+		C7A65D661BAAD58D00B5CBA5 /* JHBToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsViewController.h; sourceTree = "<group>"; };
+		C7A65D671BAAD58D00B5CBA5 /* JHBToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsViewController.m; sourceTree = "<group>"; };
+		C7A65D6D1BAAD5EB00B5CBA5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		DC57337F79B2E6D4C6CFBB25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -209,6 +244,16 @@
 			isa = PBXGroup;
 			children = (
 				C729B06F1BA91DE3006E9775 /* JHBTools.storyboard */,
+				C7A65D5E1BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.h */,
+				C7A65D5F1BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m */,
+				C7A65D601BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.h */,
+				C7A65D611BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m */,
+				C7A65D621BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.h */,
+				C7A65D631BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m */,
+				C7A65D641BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.h */,
+				C7A65D651BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m */,
+				C7A65D661BAAD58D00B5CBA5 /* JHBToolsViewController.h */,
+				C7A65D671BAAD58D00B5CBA5 /* JHBToolsViewController.m */,
 			);
 			name = "工具";
 			sourceTree = "<group>";
@@ -216,7 +261,15 @@
 		C729B0691BA916B8006E9775 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
-				C729B06D1BA91DD3006E9775 /* JHBMe.storyboard */,
+				C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */,
+				C7A65D511BAAD4A600B5CBA5 /* JHBMeTableViewController.h */,
+				C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */,
+				C7A65D551BAAD4CF00B5CBA5 /* JHBCategoryViewController.h */,
+				C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */,
+				C7A65D581BAAD4F300B5CBA5 /* JHBFavourateViewController.h */,
+				C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */,
+				C7A65D5A1BAAD4F300B5CBA5 /* JHBOrderViewController.h */,
+				C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */,
 			);
 			name = "我";
 			sourceTree = "<group>";
@@ -231,6 +284,7 @@
 		C76628F01BA94DA800E11F12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7A65D481BAAC7D500B5CBA5 /* 我 */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -238,8 +292,20 @@
 		C76628F11BA94DC700E11F12 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C7A65D6D1BAAD5EB00B5CBA5 /* UIView+Extension.h */,
+				C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		C7A65D481BAAC7D500B5CBA5 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */,
+				C7A65D4A1BAAC81200B5CBA5 /* JHBMeFavourateView.h */,
+				C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */,
+			);
+			name = "我";
 			sourceTree = "<group>";
 		};
 		F2F6A28CCD304DEC16A77B05 /* Pods */ = {
@@ -334,10 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C729B0721BA91E0F006E9775 /* JHBTrade.storyboard in Resources */,
-				C729B06E1BA91DD3006E9775 /* JHBMe.storyboard in Resources */,
 				C729B04D1BA91593006E9775 /* LaunchScreen.xib in Resources */,
 				C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */,
+				C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */,
 				C729B04A1BA91593006E9775 /* Images.xcassets in Resources */,
+				C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */,
 				C729B0701BA91DE3006E9775 /* JHBTools.storyboard in Resources */,
 				C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */,
 			);
@@ -390,11 +457,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A65D5D1BAAD4F300B5CBA5 /* JHBOrderViewController.m in Sources */,
 				C729B03F1BA91593006E9775 /* AppDelegate.m in Sources */,
+				C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */,
+				C7A65D6A1BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m in Sources */,
 				C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */,
+				C7A65D691BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m in Sources */,
+				C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */,
 				C729B0421BA91593006E9775 /* WeddingDemo.xcdatamodeld in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
+				C7A65D6C1BAAD58D00B5CBA5 /* JHBToolsViewController.m in Sources */,
+				C7A65D6B1BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m in Sources */,
+				C7A65D681BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m in Sources */,
 				C729B03C1BA91593006E9775 /* main.m in Sources */,
+				C7A65D5C1BAAD4F300B5CBA5 /* JHBFavourateViewController.m in Sources */,
+				C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */,
+				C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

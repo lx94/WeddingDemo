@@ -96,7 +96,7 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (section ==0) {
-        return @"dl";
+        return @"系统的";
     }else{
         return @"我的";
     }
