@@ -33,6 +33,9 @@
 		C7A65D6B1BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D651BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m */; };
 		C7A65D6C1BAAD58D00B5CBA5 /* JHBToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D671BAAD58D00B5CBA5 /* JHBToolsViewController.m */; };
 		C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */; };
+		C7A65D721BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D711BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.m */; };
+		C7A65D751BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D741BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m */; };
+		C7A65D791BAAF44900B5CBA5 /* JHBAdPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D781BAAF44900B5CBA5 /* JHBAdPageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,12 @@
 		C7A65D671BAAD58D00B5CBA5 /* JHBToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsViewController.m; sourceTree = "<group>"; };
 		C7A65D6D1BAAD5EB00B5CBA5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		C7A65D701BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSystemInvitationViewController.h; sourceTree = "<group>"; };
+		C7A65D711BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBSystemInvitationViewController.m; sourceTree = "<group>"; };
+		C7A65D731BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBPersonInvitationViewController.h; sourceTree = "<group>"; };
+		C7A65D741BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBPersonInvitationViewController.m; sourceTree = "<group>"; };
+		C7A65D771BAAF44900B5CBA5 /* JHBAdPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBAdPageView.h; sourceTree = "<group>"; };
+		C7A65D781BAAF44900B5CBA5 /* JHBAdPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBAdPageView.m; sourceTree = "<group>"; };
 		DC57337F79B2E6D4C6CFBB25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -228,6 +237,10 @@
 				C729B0731BA91E3B006E9775 /* JHBForum.storyboard */,
 				C76628F21BA94F9700E11F12 /* JHBForumTableViewController.h */,
 				C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */,
+				C7A65D701BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.h */,
+				C7A65D711BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.m */,
+				C7A65D731BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.h */,
+				C7A65D741BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m */,
 			);
 			name = "论坛";
 			sourceTree = "<group>";
@@ -284,6 +297,7 @@
 		C76628F01BA94DA800E11F12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7A65D761BAAF43200B5CBA5 /* 轮播视图 */,
 				C7A65D481BAAC7D500B5CBA5 /* 我 */,
 			);
 			name = Views;
@@ -306,6 +320,15 @@
 				C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */,
 			);
 			name = "我";
+			sourceTree = "<group>";
+		};
+		C7A65D761BAAF43200B5CBA5 /* 轮播视图 */ = {
+			isa = PBXGroup;
+			children = (
+				C7A65D771BAAF44900B5CBA5 /* JHBAdPageView.h */,
+				C7A65D781BAAF44900B5CBA5 /* JHBAdPageView.m */,
+			);
+			name = "轮播视图";
 			sourceTree = "<group>";
 		};
 		F2F6A28CCD304DEC16A77B05 /* Pods */ = {
@@ -462,15 +485,18 @@
 				C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */,
 				C7A65D6A1BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m in Sources */,
 				C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */,
+				C7A65D791BAAF44900B5CBA5 /* JHBAdPageView.m in Sources */,
 				C7A65D691BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m in Sources */,
 				C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */,
 				C729B0421BA91593006E9775 /* WeddingDemo.xcdatamodeld in Sources */,
+				C7A65D721BAADA4F00B5CBA5 /* JHBSystemInvitationViewController.m in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
 				C7A65D6C1BAAD58D00B5CBA5 /* JHBToolsViewController.m in Sources */,
 				C7A65D6B1BAAD58D00B5CBA5 /* JHBToolsSeatingViewController.m in Sources */,
 				C7A65D681BAAD58D00B5CBA5 /* JHBToolsAddSeatingViewController.m in Sources */,
 				C729B03C1BA91593006E9775 /* main.m in Sources */,
 				C7A65D5C1BAAD4F300B5CBA5 /* JHBFavourateViewController.m in Sources */,
+				C7A65D751BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m in Sources */,
 				C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */,
 				C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */,
 			);

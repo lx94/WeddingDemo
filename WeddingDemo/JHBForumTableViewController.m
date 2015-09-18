@@ -7,9 +7,9 @@
 //
 
 #import "JHBForumTableViewController.h"
-
+#import "JHBAdPageView.h"
 @interface JHBForumTableViewController ()
-
+@property(nonatomic,strong)JHBAdPageView    *adView;
 @end
 
 @implementation JHBForumTableViewController
@@ -17,11 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _adView = [[JHBAdPageView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, 100)];
+    _adView.iDisplayTime = 2;
+    [_adView startAdsWithBlock:@[@"m1",@"m2",@"m3",@"m4",@"m5"] block:^(NSInteger clickIndex){
+        NSLog(@"%d",(int)clickIndex);
+    }];
+
+    self.tableView.tableHeaderView = _adView;
 }
 
 - (void)didReceiveMemoryWarning {
