@@ -22,8 +22,11 @@
     [_adView startAdsWithBlock:@[@"m1",@"m2",@"m3",@"m4",@"m5"] block:^(NSInteger clickIndex){
         NSLog(@"%d",(int)clickIndex);
     }];
+    UIView *headerView = [[UIView alloc]init];
+    headerView.frame = CGRectMake(0, 0, 375, 60);
+    [headerView addSubview:_adView];
 
-    self.tableView.tableHeaderView = _adView;
+    self.tableView.tableHeaderView = headerView;
 }
 
 - (void)didReceiveMemoryWarning {
