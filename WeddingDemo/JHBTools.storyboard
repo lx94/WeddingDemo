@@ -39,6 +39,7 @@
                     <connections>
                         <segue destination="1lc-Lk-moP" kind="show" identifier="toSeating" id="YBV-Hs-EPa"/>
                         <segue destination="Cha-T8-2nZ" kind="show" identifier="toLoveJourney" id="BiL-iN-Vx3"/>
+                        <segue destination="Vwu-5e-CvM" kind="show" identifier="toPlaning" id="Ciy-0O-lNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxE-vY-Dga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C82-E4-dOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673.5" y="392.5"/>
+            <point key="canvasLocation" x="629.5" y="392.5"/>
         </scene>
         <!--添加席位-->
         <scene sceneID="iFp-uf-r4h">
@@ -109,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9r-19-dzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673.5" y="1206.5"/>
+            <point key="canvasLocation" x="629.5" y="1206.5"/>
         </scene>
         <!--爱情故事-->
         <scene sceneID="eRC-oQ-Yqf">
@@ -130,6 +131,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-lM-Ypn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152.5" y="1206.5"/>
+        </scene>
+        <!--完美策划-->
+        <scene sceneID="wjz-ab-Epd">
+            <objects>
+                <viewController title="完美策划" id="Vwu-5e-CvM" customClass="JHBToolsPlaningViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LVt-JM-Rda"/>
+                        <viewControllerLayoutGuide type="bottom" id="GzS-mF-4iM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GTq-uI-YNL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4A-KO-g8N">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="0R3-vp-D1A" kind="show" identifier="toContent" id="zbs-z0-ja0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5Y-sc-LNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629.5" y="-436.5"/>
+        </scene>
+        <!--策划内容-->
+        <scene sceneID="IiQ-4P-LBl">
+            <objects>
+                <viewController title="策划内容" id="0R3-vp-D1A" customClass="JHBToolsPlaningContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PKa-8S-XC1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wrv-2S-RGr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SAQ-EM-xrc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="策划内容" id="0GQ-Tn-hCy"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UuM-ux-l07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152.5" y="-436.5"/>
         </scene>
     </scenes>
 </document>
