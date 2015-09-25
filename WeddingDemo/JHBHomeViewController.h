@@ -10,4 +10,5 @@
 
 @interface JHBHomeViewController : RDVTabBarController
 
+@property (strong,nonatomic) RDVTabBar *tabBar;
 @end

@@ -7,8 +7,10 @@
 //
 
 #import "JHBPersonInvitationViewController.h"
-
+#import "JHBAdPageView.h"
 @interface JHBPersonInvitationViewController ()
+@property(nonatomic,strong)JHBAdPageView    *adView;
+@property (weak, nonatomic) IBOutlet UITableView *PersonBarTableView;
 
 @end
 
@@ -17,21 +19,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setUpPageView];
+    
+    _PersonBarTableView.contentInset = UIEdgeInsetsMake(0.f, 0.f, 44.f, 0.f);
+    [self.view bringSubviewToFront:_PersonBarTableView];
+
+}
+#pragma mark 设置图片轮播
+-(void)setUpPageView{
+    _adView = [[JHBAdPageView alloc] initWithFrame:CGRectMake(0,30.f, [UIScreen mainScreen].bounds.size.width, 150)];
+    _adView.iDisplayTime = 2;
+    [_adView startAdsWithBlock:@[@"m1",@"m2",@"m3",@"m4",@"m5"] block:^(NSInteger clickIndex){
+        NSLog(@"%d",(int)clickIndex);
+    }];
+    [self.view addSubview:_adView];
 }
 
+#pragma mark 设置个人贴的tableview
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 12;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellID = @"PersonBarCell";
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+    if (cell !=nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+    }
+    cell.textLabel.text = @"个人区";
+    cell.detailTextLabel.text = @"内容简介";
+    return cell;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

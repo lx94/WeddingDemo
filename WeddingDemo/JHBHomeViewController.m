@@ -47,7 +47,6 @@
     NSArray *tabBarItemTitles = @[@"主页", @"论坛", @"交易", @"工具", @"我"];
     
     RDVTabBar *tabBar = [self tabBar];
-    
     [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 50)];
     
     NSInteger index = 0;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JHBPersonInvitationViewController : UIViewController
+@interface JHBPersonInvitationViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end
