@@ -85,7 +85,6 @@
             case 3:
                 [toolsButton setTitle:@"完美策划" forState:UIControlStateNormal];
                 [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                [toolsButton addTarget:self action:@selector(planingClicked) forControlEvents:UIControlEventTouchUpInside];
                 toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 4:
@@ -146,11 +145,6 @@
 - (void)loveJourneyClicked
 {
     [self performSegueWithIdentifier:@"toLoveJourney" sender:nil];
-}
-
-- (void)planingClicked
-{
-    [self performSegueWithIdentifier:@"toPlaning" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning

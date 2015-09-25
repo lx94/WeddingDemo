@@ -19,16 +19,7 @@
 		C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0731BA91E3B006E9775 /* JHBForum.storyboard */; };
 		C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */; };
 		C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */; };
-<<<<<<< HEAD
 		C78AA06F1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AA06E1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m */; };
-=======
-		C76628F41BA94F9700E11F12 /* JHBForumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */; };
-		C7998E481BAAEE2100334CA8 /* JHBHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7998E471BAAEE2100334CA8 /* JHBHomePageViewController.m */; };
-		C7998E4B1BAAEE3700334CA8 /* JHBHomePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7998E4A1BAAEE3700334CA8 /* JHBHomePageDataModel.m */; };
-		C7998E521BAAEE4600334CA8 /* JHBHomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7998E4D1BAAEE4600334CA8 /* JHBHomePageTableViewCell.m */; };
-		C7998E541BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7998E501BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.m */; };
-		C7998E571BAAEE8800334CA8 /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7998E561BAAEE8800334CA8 /* tgs.plist */; };
->>>>>>> origin/master
 		C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */; };
 		C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */; };
 		C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */; };
@@ -78,22 +69,8 @@
 		C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBHomePage.storyboard; sourceTree = "<group>"; };
 		C76628EC1BA948EE00E11F12 /* JHBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomeViewController.h; sourceTree = "<group>"; };
 		C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomeViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		C78AA06D1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSystemInvitationTableViewController.h; sourceTree = "<group>"; };
 		C78AA06E1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBSystemInvitationTableViewController.m; sourceTree = "<group>"; };
-=======
-		C76628F21BA94F9700E11F12 /* JHBForumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBForumTableViewController.h; sourceTree = "<group>"; };
-		C76628F31BA94F9700E11F12 /* JHBForumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBForumTableViewController.m; sourceTree = "<group>"; };
-		C7998E461BAAEE2100334CA8 /* JHBHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomePageViewController.h; sourceTree = "<group>"; };
-		C7998E471BAAEE2100334CA8 /* JHBHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageViewController.m; sourceTree = "<group>"; };
-		C7998E491BAAEE3700334CA8 /* JHBHomePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomePageDataModel.h; sourceTree = "<group>"; };
-		C7998E4A1BAAEE3700334CA8 /* JHBHomePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageDataModel.m; sourceTree = "<group>"; };
-		C7998E4C1BAAEE4600334CA8 /* JHBHomePageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomePageTableViewCell.h; sourceTree = "<group>"; };
-		C7998E4D1BAAEE4600334CA8 /* JHBHomePageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageTableViewCell.m; sourceTree = "<group>"; };
-		C7998E4F1BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomePageSection0TableViewCell.h; sourceTree = "<group>"; };
-		C7998E501BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageSection0TableViewCell.m; sourceTree = "<group>"; };
-		C7998E561BAAEE8800334CA8 /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
->>>>>>> origin/master
 		C7A65D4A1BAAC81200B5CBA5 /* JHBMeFavourateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeFavourateView.h; sourceTree = "<group>"; };
 		C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeFavourateView.m; sourceTree = "<group>"; };
 		C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHBMeFavourateView.xib; sourceTree = "<group>"; };
@@ -252,10 +229,7 @@
 		C729B0651BA91617006E9775 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
-				C7998E451BAAED9800334CA8 /* Others */,
-				C7998E441BAAED9400334CA8 /* Model */,
-				C7998E431BAAED9000334CA8 /* View */,
-				C7998E421BAAED8000334CA8 /* Controller */,
+				C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -344,50 +318,11 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		C78AA0671BAC13C0000E86A0 /* 论坛 */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "论坛";
-=======
-		C7998E421BAAED8000334CA8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C7998E461BAAEE2100334CA8 /* JHBHomePageViewController.h */,
-				C7998E471BAAEE2100334CA8 /* JHBHomePageViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		C7998E431BAAED9000334CA8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C7998E4F1BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.h */,
-				C7998E501BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.m */,
-				C7998E4C1BAAEE4600334CA8 /* JHBHomePageTableViewCell.h */,
-				C7998E4D1BAAEE4600334CA8 /* JHBHomePageTableViewCell.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		C7998E441BAAED9400334CA8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C7998E491BAAEE3700334CA8 /* JHBHomePageDataModel.h */,
-				C7998E4A1BAAEE3700334CA8 /* JHBHomePageDataModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		C7998E451BAAED9800334CA8 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				C7998E561BAAEE8800334CA8 /* tgs.plist */,
-				C729B0751BA91E52006E9775 /* JHBHomePage.storyboard */,
-			);
-			name = Others;
->>>>>>> origin/master
 			sourceTree = "<group>";
 		};
 		C7A65D481BAAC7D500B5CBA5 /* 我 */ = {
@@ -502,7 +437,6 @@
 			files = (
 				C729B0721BA91E0F006E9775 /* JHBTrade.storyboard in Resources */,
 				C729B04D1BA91593006E9775 /* LaunchScreen.xib in Resources */,
-				C7998E571BAAEE8800334CA8 /* tgs.plist in Resources */,
 				C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */,
 				C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */,
 				C729B04A1BA91593006E9775 /* Images.xcassets in Resources */,
@@ -561,19 +495,13 @@
 			files = (
 				C7A65D5D1BAAD4F300B5CBA5 /* JHBOrderViewController.m in Sources */,
 				C729B03F1BA91593006E9775 /* AppDelegate.m in Sources */,
-				C7998E4B1BAAEE3700334CA8 /* JHBHomePageDataModel.m in Sources */,
 				C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */,
-<<<<<<< HEAD
 				C78AA06F1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m in Sources */,
-=======
-				C7998E481BAAEE2100334CA8 /* JHBHomePageViewController.m in Sources */,
->>>>>>> origin/master
 				C7A65D6A1BAAD58D00B5CBA5 /* JHBToolsOurStoryViewController.m in Sources */,
 				C7A65D791BAAF44900B5CBA5 /* JHBAdPageView.m in Sources */,
 				C7BBFBA21BB172860004C1B9 /* NSString+MoreExtentions.m in Sources */,
 				C7A65D691BAAD58D00B5CBA5 /* JHBToolsLoveJourneyViewController.m in Sources */,
 				C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */,
-				C7998E521BAAEE4600334CA8 /* JHBHomePageTableViewCell.m in Sources */,
 				C729B0421BA91593006E9775 /* WeddingDemo.xcdatamodeld in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
 				C7A65D6C1BAAD58D00B5CBA5 /* JHBToolsViewController.m in Sources */,
@@ -584,11 +512,7 @@
 				C7A65D751BAADA8B00B5CBA5 /* JHBPersonInvitationViewController.m in Sources */,
 				C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */,
 				C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */,
-<<<<<<< HEAD
 				C7C1EC561BB2A3D200B58466 /* JHBForumViewController.m in Sources */,
-=======
-				C7998E541BAAEE4600334CA8 /* JHBHomePageSection0TableViewCell.m in Sources */,
->>>>>>> origin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
