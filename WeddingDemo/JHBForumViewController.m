@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置弹窗从导航栏下出现
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupMenuView];
     [self setPersonBarButton];
 }
@@ -86,7 +88,7 @@
     self.menu.liveBlurBackgroundStyle = REMenuLiveBackgroundStyleDark;
     self.menu.textColor = [UIColor whiteColor];
     self.menu.subtitleTextColor = [UIColor whiteColor];
-    //[self.view addSubview:_menu];
+    [self.menu showInView:self.view];
 }
 // 视图将出现
 - (void)viewWillAppear:(BOOL)animated

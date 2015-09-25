@@ -21,19 +21,21 @@
     // Do any additional setup after loading the view.
     
     [self setUpPageView];
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     _PersonBarTableView.contentInset = UIEdgeInsetsMake(0.f, 0.f, 44.f, 0.f);
     [self.view bringSubviewToFront:_PersonBarTableView];
+    
 
 }
 #pragma mark 设置图片轮播
 -(void)setUpPageView{
     _adView = [[JHBAdPageView alloc] initWithFrame:CGRectMake(0,30.f, [UIScreen mainScreen].bounds.size.width, 150)];
+    self.PersonBarTableView.tableHeaderView = _adView;
     _adView.iDisplayTime = 2;
     [_adView startAdsWithBlock:@[@"m1",@"m2",@"m3",@"m4",@"m5"] block:^(NSInteger clickIndex){
         NSLog(@"%d",(int)clickIndex);
     }];
-    [self.view addSubview:_adView];
+    self.PersonBarTableView.tableHeaderView = _adView;
 }
 
 #pragma mark 设置个人贴的tableview
