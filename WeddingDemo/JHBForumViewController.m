@@ -42,28 +42,27 @@
                                                         image:nil
                                              highlightedImage:nil
                                                        action:^(REMenuItem *item) {
-                                                           NSLog(@"baidu");
-                                                       }];
+                                                           [self performSegueWithIdentifier:@"toSystemBar" sender:nil];                                                       }];
     REMenuItem *fengItem = [[REMenuItem alloc] initWithTitle:@"婚礼搭配"
                                                     subtitle:@"24小时提供最及时，最权威，最客观的新闻资讯"
                                                        image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
-                                                          NSLog(@"feng");
+                                                          [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
                                                       }];
     REMenuItem *sinaItem = [[REMenuItem alloc] initWithTitle:@"这样的婚礼你羡慕吗"
                                                     subtitle:@"最新，最快头条新闻一网打尽"
                                                        image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
-                                                          NSLog(@"xinlang");
+                                                          [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
                                                       }];
     REMenuItem *tencenItem = [[REMenuItem alloc] initWithTitle:@"结婚吧"
                                                       subtitle:@"中国浏览最大的中文门户网站"
                                                          image:nil
                                               highlightedImage:nil
                                                         action:^(REMenuItem *item) {
-                                                            NSLog(@"tengxun");
+                                                            [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
                                                         }];
     REMenuItem *wangyiItem = [[REMenuItem alloc] initWithTitle:@"婚礼幺蛾子"
                                                       subtitle:@"因新闻最快速，评论最犀利而备受推崇"
@@ -94,7 +93,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"123");
     if (![self.menu isOpen]) {
         [self.menu showInView:self.view];
     }
