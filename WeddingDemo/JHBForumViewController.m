@@ -7,6 +7,12 @@
 //
 
 #import "JHBForumViewController.h"
+#import "JHBWebViewController.h"
+
+#define zhenaiNewUrl @"http://www.zhenai.com"
+#define xijieNewUrl @"http://www.likewed.com"
+#define jiujiuNewUrl @"http://www.99wed.com"
+#define hunqingNewUrl @"http://www.wedding86.com"
 
 @interface JHBForumViewController ()
 
@@ -17,10 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     //设置弹窗从导航栏下出现
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setupMenuView];
     [self setPersonBarButton];
+    
+    
 }
 -(void)setPersonBarButton{
     UIButton *personBarButton = [[UIButton alloc]init];
@@ -37,52 +46,46 @@
 {
     // 消除block强引用
     __typeof (self) __weak weakSelf = self;
-    REMenuItem *baiduItem = [[REMenuItem alloc] initWithTitle:@"婚礼十个小细节"
-                                                     subtitle:@"全球最大的中文新闻平台"
+    
+    REMenuItem *jiujiuItem = [[REMenuItem alloc] initWithTitle:@"久久结婚"
+                                                     subtitle:@"中国第一结婚门户网"
                                                         image:nil
                                              highlightedImage:nil
                                                        action:^(REMenuItem *item) {
-                                                           [self performSegueWithIdentifier:@"toSystemBar" sender:nil];                                                       }];
-    REMenuItem *fengItem = [[REMenuItem alloc] initWithTitle:@"婚礼搭配"
-                                                    subtitle:@"24小时提供最及时，最权威，最客观的新闻资讯"
+                                                           [weakSelf loadWebViewWith:jiujiuNewUrl];                                                    }];
+    REMenuItem *xijieItem = [[REMenuItem alloc] initWithTitle:@"喜结网"
+                                                    subtitle:@"让你的婚礼更轻松"
                                                        image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
-                                                          [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
+                                                          [weakSelf loadWebViewWith:xijieNewUrl];
                                                       }];
-    REMenuItem *sinaItem = [[REMenuItem alloc] initWithTitle:@"这样的婚礼你羡慕吗"
-                                                    subtitle:@"最新，最快头条新闻一网打尽"
+    REMenuItem *zhenaiItem = [[REMenuItem alloc] initWithTitle:@"珍爱网"
+                                                    subtitle:@"相亲无难事，珍爱有红娘"
                                                        image:nil
                                             highlightedImage:nil
                                                       action:^(REMenuItem *item) {
-                                                          [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
+                                                          [weakSelf loadWebViewWith:zhenaiNewUrl];
                                                       }];
-    REMenuItem *tencenItem = [[REMenuItem alloc] initWithTitle:@"结婚吧"
-                                                      subtitle:@"中国浏览最大的中文门户网站"
+    REMenuItem *hunqingItem = [[REMenuItem alloc] initWithTitle:@"中国婚庆网"
+                                                      subtitle:@"你想要的婚礼，就在我们这里"
                                                          image:nil
                                               highlightedImage:nil
                                                         action:^(REMenuItem *item) {
-                                                            [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
+                                                            [weakSelf loadWebViewWith:hunqingNewUrl];
                                                         }];
-    REMenuItem *wangyiItem = [[REMenuItem alloc] initWithTitle:@"婚礼幺蛾子"
-                                                      subtitle:@"因新闻最快速，评论最犀利而备受推崇"
+    REMenuItem *newItem = [[REMenuItem alloc] initWithTitle:@"每日贴示"
+                                                      subtitle:@"每天的清晨，带给你不同的惊喜"
                                                          image:nil
                                               highlightedImage:nil
                                                         action:^(REMenuItem *item) {
-                                                            [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
+                                                            [weakSelf performSegueWithIdentifier:@"toSystemBar" sender:nil];
   
-                                                        }];
-    REMenuItem *bottomItem = [[REMenuItem alloc] initWithTitle:@"婚礼幺蛾子"
-                                                      subtitle:@"因新闻最快速，评论最犀利而备受推崇"
-                                                         image:nil
-                                              highlightedImage:nil
-                                                        action:^(REMenuItem *item) {
-                                                            [self performSegueWithIdentifier:@"toSystemBar" sender:nil];
-                                                            
                                                         }];
 
     
-    self.menu = [[REMenu alloc] initWithItems:@[fengItem, baiduItem, sinaItem, tencenItem, wangyiItem,bottomItem]];
+    self.menu = [[REMenu alloc] initWithItems:@[hunqingItem, xijieItem, jiujiuItem, zhenaiItem, newItem]];
+    
     self.menu.liveBlur = YES;
     self.menu.liveBlurBackgroundStyle = REMenuLiveBackgroundStyleDark;
     self.menu.textColor = [UIColor whiteColor];
@@ -109,6 +112,15 @@
     }
 }
 
+-(void)loadWebViewWith:(NSString *)url{
+    [self performSegueWithIdentifier:@"toWebView" sender:url];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if (sender !=nil) {
+        JHBWebViewController *webVC = segue.destinationViewController;
+        webVC.url = sender;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

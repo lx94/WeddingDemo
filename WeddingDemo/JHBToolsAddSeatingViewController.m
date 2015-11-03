@@ -92,6 +92,7 @@
     deskID.textAlignment = NSTextAlignmentCenter;
     deskID.font = TEXTFONT;
     deskID.placeholder=@"请输入桌名（如：新郎大学同学桌）";
+    deskID.alpha = 0.7;
     _deskID = deskID;
     [self.view addSubview:_deskID];
     
@@ -101,6 +102,7 @@
     customerName.textAlignment = NSTextAlignmentCenter;
     customerName.placeholder=@"点击输入宾客信息，姓名之间用“空格”分开";
     customerName.font = TEXTFONT;
+    customerName.alpha = 0.7;
     _customerName = customerName;
     [self.view addSubview:_customerName];
 }

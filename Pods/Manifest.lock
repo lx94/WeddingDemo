@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - BSImagePicker (0.7)
   - MBProgressHUD (0.9.1)
+  - MJRefresh (2.4.9)
   - RDVTabBarController (1.1.9)
   - REMenu (1.10)
   - SDWebImage (3.7.3):
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
   - BSImagePicker (~> 0.7)
   - MBProgressHUD (~> 0.9.1)
+  - MJRefresh
   - RDVTabBarController (~> 1.1.9)
   - REMenu (~> 1.10)
   - SDWebImage (~> 3.7)
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   BSImagePicker: df4f325f43330d853285c57ee7661ec5c408a124
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJRefresh: be84acb912d0a66364f76a75426698a39528e2ed
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   REMenu: 30dad195930adf6c5eeb8041e3257aa60bf9fa49
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

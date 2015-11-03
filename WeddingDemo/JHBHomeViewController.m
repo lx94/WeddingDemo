@@ -28,8 +28,8 @@
     
     UINavigationController *forumViewController = [storyboard2 instantiateViewControllerWithIdentifier:@"forumnav"];
     
-    UIStoryboard* storyboard3 = [UIStoryboard storyboardWithName:@"JHBTrade" bundle:nil];
-    UINavigationController *tradeViewController = [storyboard3 instantiateViewControllerWithIdentifier:@"tradenav"];
+//    UIStoryboard* storyboard3 = [UIStoryboard storyboardWithName:@"JHBTrade" bundle:nil];
+//    UINavigationController *tradeViewController = [storyboard3 instantiateViewControllerWithIdentifier:@"tradenav"];
     
     UIStoryboard* storyboard4 = [UIStoryboard storyboardWithName:@"JHBTools" bundle:nil];
     UINavigationController *toolsViewController = [storyboard4 instantiateViewControllerWithIdentifier:@"toolsnav"];
@@ -37,14 +37,14 @@
     UIStoryboard* storyboard5 = [UIStoryboard storyboardWithName:@"JHBMe" bundle:nil];
     UINavigationController *meViewController = [storyboard5 instantiateViewControllerWithIdentifier:@"menav"];
     
-    [self setViewControllers:@[homePageViewController,forumViewController,
-                               tradeViewController,toolsViewController,meViewController]];
+    [self setViewControllers:@[homePageViewController,forumViewController
+                            ,toolsViewController,meViewController]];
     ;
     
     //UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     //UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
     //NSArray *tabBarItemImages = @[@"bottom_btn1", @"bottom_btn2", @"bottom_btn3"];
-    NSArray *tabBarItemTitles = @[@"主页", @"论坛", @"交易", @"工具", @"我"];
+    NSArray *tabBarItemTitles = @[@"主页", @"论坛", @"工具", @"我"];
     
     RDVTabBar *tabBar = [self tabBar];
     [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 50)];

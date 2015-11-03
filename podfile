@@ -4,3 +4,5 @@ pod 'MBProgressHUD', '~> 0.9.1'
 pod 'SDWebImage', '~>3.7'
 pod 'BSImagePicker', '~> 0.7'
 pod 'REMenu', '~> 1.10'
+pod 'MJRefresh'
+

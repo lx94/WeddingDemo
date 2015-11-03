@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "JHBHomeViewController.h"
+#import "JHBOpenPageViewController.h"
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) JHBOpenPageViewController *introductionView;
 
 @end
 
@@ -21,10 +25,29 @@
     UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
     
-    JHBHomeViewController* homeVC = [[JHBHomeViewController alloc]init];
-    window.rootViewController = homeVC;
-    
     [window makeKeyAndVisible];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
+    
+    // Added Introduction View Controller
+    NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
+    //NSArray *coverImageNames = @[@"", @"", @""];
+    NSArray *backgroundImageNames = @[@"image_index_1", @"image_index_2", @"image_index_3"];
+    self.introductionView = [[JHBOpenPageViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
+    
+    [self.window addSubview:self.introductionView.view];
+    
+    __weak AppDelegate *weakSelf = self;
+    self.introductionView.didSelectedEnter = ^() {
+        [weakSelf.introductionView.view removeFromSuperview];
+        weakSelf.introductionView = nil;
+        
+        JHBHomeViewController* homeVC = [[JHBHomeViewController alloc]init];
+        weakSelf.window.rootViewController = homeVC;
+    };
+    return YES;
 
     
     return YES;

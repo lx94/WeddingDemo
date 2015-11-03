@@ -8,14 +8,18 @@
 
 #import "JHBToolsViewController.h"
 
-#define HEIGHT 64.f
-#define BUTTONCOUNT 9
-#define COLUMNNUM 3
-#define ROWNUM (BUTTONCOUNT/COLUMNNUM)
-#define TOOLBUTTONWIDTH [UIScreen mainScreen].bounds.size.width/(BUTTONCOUNT/COLUMNNUM)
-#define TOOLBUTTONHEIGHT [UIScreen mainScreen].bounds.size.width/(BUTTONCOUNT/COLUMNNUM)
-#define BUTTONFONT [UIFont systemFontOfSize:14.f]
+#define PRAISEFONT [UIFont systemFontOfSize:12.f]
+
 @interface JHBToolsViewController ()
+
+@property (weak, nonatomic) UIView *tempView;
+@property (weak, nonatomic) UIView *praiseView;
+@property (weak, nonatomic) UIView *praiseBGView;
+@property (weak, nonatomic) UIView *heightLine;
+@property (weak, nonatomic) UIButton *praiseButton;
+@property (weak, nonatomic) UILabel *upLabel;
+@property (weak, nonatomic) UILabel *praiseCount;
+@property (weak, nonatomic) UILabel *addLabel;
 
 @end
 
@@ -26,6 +30,23 @@
     [super viewDidLoad];
     
     [self addSubViews];
+    
+    JHBToolsPraiseView *praiseView = [JHBToolsPraiseView toolsPraiseView];
+    praiseView.frame = CGRectMake(TOOLBUTTONWIDTH, _tempView.bottom+([UIScreen mainScreen].bounds.size.height-_tempView.bottom-44.f)*0.5, TOOLBUTTONWIDTH, 44.f);
+    _praiseView = praiseView;
+    praiseView.delegate = self;
+    [self.view addSubview:praiseView];
+    _praiseBGView.hidden = YES;
+    _praiseView.hidden = YES;
+    
+//    UILabel *addLabel = [[UILabel alloc]init];
+//    _addLabel = addLabel;
+//    _addLabel.text = @"+1";
+//    _addLabel.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
+//    _addLabel.frame = CGRectMake(_praiseBGView.right, _praiseBGView.top, 20.f, _praiseBGView.height);
+//    _addLabel.hidden = YES;
+//    _addLabel.alpha = 1.0f;
+//    [self.view addSubview:_addLabel];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -47,10 +68,9 @@
 {
     CGFloat w =TOOLBUTTONWIDTH;
     CGFloat h =TOOLBUTTONHEIGHT;
+    
     for (int i = 0; i < BUTTONCOUNT; i++)
     {
-        UIButton *toolsButton = [[UIButton alloc]init];
-        
         CGFloat row = i / COLUMNNUM;
         CGFloat column = i % COLUMNNUM;
             
@@ -59,59 +79,47 @@
 
         y = h * row;
         
+        JHBToolsButton *toolsButton = [[JHBToolsButton alloc]init];
         toolsButton.frame = CGRectMake(x, y + HEIGHT, w, h);
-
-        //toolsButton.backgroundColor = [UIColor colorWithRed:244.f/255.f green:244.f/255.f blue:244.f/255.f alpha:1];
-        //toolsButton.backgroundColor = [UIColor cyanColor];
+        [toolsButton setTitleColor:[UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1] forState:UIControlStateNormal];
+        [toolsButton setTitleColor:[UIColor colorWithRed:111.f/255.f green:44.f/255.f blue:37.f/255.f alpha:1] forState:UIControlStateHighlighted];
+        toolsButton.titleLabel.font = BUTTONFONT;
+        toolsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [toolsButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"wedding_%d",i+1]] forState:UIControlStateNormal];
+        
         switch (i)
         {
             case 0:
                 [toolsButton setTitle:@"良辰吉日" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 1:
                 [toolsButton setTitle:@"婚姻登记" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 2:
                 [toolsButton setTitle:@"恋爱旅程" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
                 [toolsButton addTarget:self action:@selector(loveJourneyClicked) forControlEvents:UIControlEventTouchUpInside];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 3:
                 [toolsButton setTitle:@"完美策划" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
+                [toolsButton addTarget:self action:@selector(planingClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 4:
                 [toolsButton setTitle:@"遇见幸福" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 5:
                 [toolsButton setTitle:@"诚挚邀请" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 6:
                 [toolsButton setTitle:@"结婚流程" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 7:
                 [toolsButton setTitle:@"座位安排" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
                 [toolsButton addTarget:self action:@selector(seatingClicked) forControlEvents:UIControlEventTouchUpInside];
-                toolsButton.titleLabel.font = BUTTONFONT;
                 break;
             case 8:
-                [toolsButton setTitle:@"分享应用" forState:UIControlStateNormal];
-                [toolsButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-                toolsButton.titleLabel.font = BUTTONFONT;
+                [toolsButton setTitle:@"给个赞呗" forState:UIControlStateNormal];
+                [toolsButton addTarget:self action:@selector(lovedClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             default:
                 break;
@@ -124,6 +132,7 @@
         widthline.frame = CGRectMake(0, i * h + HEIGHT, [UIScreen mainScreen].bounds.size.width, 1);
 
         widthline.backgroundColor = [UIColor colorWithRed:227.f/255.f green:227.f/255.f blue:227.f/255.f alpha:1];
+        _tempView = widthline;
         [self.view addSubview:widthline];
         
     }
@@ -132,9 +141,33 @@
         UIView *heightline = [[UIView alloc]init];
         heightline.frame = CGRectMake(i * w, HEIGHT, 1, COLUMNNUM * TOOLBUTTONHEIGHT);
         heightline.backgroundColor = [UIColor colorWithRed:227.f/255.f green:227.f/255.f blue:227.f/255.f alpha:1];
+        _heightLine = heightline;
         [self.view addSubview:heightline];
     }
 
+    UIView *praiseView = [[UIView alloc]init];
+    praiseView.frame = CGRectMake(TOOLBUTTONWIDTH, _tempView.bottom+([UIScreen mainScreen].bounds.size.height-_tempView.bottom-44.f)*0.5, TOOLBUTTONWIDTH, 44.f);
+    praiseView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    praiseView.layer.borderWidth = 0.5;
+    praiseView.layer.cornerRadius = 5.f;
+    _praiseBGView = praiseView;
+    [self.view addSubview:_praiseBGView];
+    [_praiseBGView bringSubviewToFront:_praiseView];
+    
+    UILabel *praiseText_1 = [[UILabel alloc]init];
+    praiseText_1.text = @"已有        人喜欢";
+    praiseText_1.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
+    praiseText_1.font = PRAISEFONT;
+    praiseText_1.frame = CGRectMake(_praiseBGView.right+30.f, _praiseBGView.top+15.f, 90.f, _praiseBGView.height);
+    [self.view addSubview:praiseText_1];
+    
+    UILabel *praiseCount = [[UILabel alloc]init];
+    praiseCount.text = @"2000";
+    praiseCount.font = PRAISEFONT;
+    praiseCount.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
+    praiseCount.frame = CGRectMake(_praiseBGView.right+55.f, _praiseBGView.top+15.f, 90.f, _praiseBGView.height);
+    _praiseCount = praiseCount;
+    [self.view addSubview:praiseCount];
 }
 
 - (void)seatingClicked
@@ -145,6 +178,51 @@
 - (void)loveJourneyClicked
 {
     [self performSegueWithIdentifier:@"toLoveJourney" sender:nil];
+}
+
+- (void)planingClicked
+{
+    [self performSegueWithIdentifier:@"toPlaningPage" sender:nil];
+}
+
+- (void)lovedClicked
+{
+    [UIView animateWithDuration:2.f animations:^{
+        _praiseView.hidden = NO;
+        _praiseBGView.hidden = NO;
+    }];
+}
+
+- (void)toolsPraiseViewDidPraiseButtonClicked:(UIButton *)sender
+{
+//    [UIView animateWithDuration:1.f animations:^{
+//        _addLabel.frame = CGRectMake(_praiseBGView.right+TOOLBUTTONWIDTH*0.5, _heightLine.bottom, 20.f, _praiseBGView.height);
+//        _addLabel.alpha = 0.0f;
+//        _addLabel.hidden = NO;
+//        sender.enabled = NO;
+//        int oldCount = [_praiseCount.text intValue];
+//        int newCount = oldCount+1;
+//        _praiseCount.text = [NSString stringWithFormat:@"%d",newCount];
+//    } completion:^(BOOL finished) {
+//        _addLabel.frame = CGRectMake(_praiseBGView.right, _praiseBGView.top, 20.f, _praiseBGView.height);
+//        _addLabel.alpha = 1.0f;
+//        sender.enabled = YES;
+//        _addLabel.hidden = YES;
+//    }];
+    UILabel *addLabel = [[UILabel alloc]init];
+    addLabel.text = @"+1";
+    addLabel.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
+    addLabel.frame = CGRectMake(_praiseBGView.right, _praiseBGView.top, 20.f, _praiseBGView.height);
+    [self.view addSubview:addLabel];
+    [UIView animateWithDuration:1.f animations:^{
+        addLabel.frame = CGRectMake(_praiseBGView.right+TOOLBUTTONWIDTH*0.5, _heightLine.bottom, 20.f, _praiseBGView.height);
+        addLabel.alpha = 0.0;
+        int oldCount = [_praiseCount.text intValue];
+        int newCount = oldCount+1;
+        _praiseCount.text = [NSString stringWithFormat:@"%d",newCount];
+    } completion:^(BOOL finished) {
+        [addLabel removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

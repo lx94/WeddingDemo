@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+Extension.h"
+#import "JHBToolsPraiseView.h"
+#import "JHBToolsButton.h"
 
-@interface JHBToolsViewController : UIViewController
+@interface JHBToolsViewController : UIViewController<JHBToolsPraiseViewDelegate>
 
 @end

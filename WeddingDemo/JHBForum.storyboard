@@ -15,18 +15,82 @@
                     <view key="view" contentMode="scaleToFill" id="a8X-qX-xP9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-6m-4eK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="论坛" id="abX-hR-KGq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="Y2F-k5-XNp" kind="show" identifier="toSystemBar" id="U4s-Hs-dIg"/>
-                        <segue destination="NWg-rn-dNH" kind="show" identifier="toPersonBar" id="vmS-uk-Rud"/>
+                        <segue destination="41q-3C-sUb" kind="show" identifier="toPersonBar" id="Dws-el-crh"/>
+                        <segue destination="0Fh-Ud-eAA" kind="show" identifier="toWebView" id="5rF-qA-bfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbg-JF-vmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10.5" y="447.5"/>
+        </scene>
+        <!--个人贴-->
+        <scene sceneID="6tR-KX-BbF">
+            <objects>
+                <tableViewController title="个人贴" id="41q-3C-sUb" customClass="JHBPersonInvitationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="25V-Sd-0Ks">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yMJ-KQ-ug8">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yMJ-KQ-ug8" id="iJR-mA-sIN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="41q-3C-sUb" id="GZD-5t-8y2"/>
+                            <outlet property="delegate" destination="41q-3C-sUb" id="ruH-Ml-42d"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OId-FC-g8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521.5" y="892.5"/>
+        </scene>
+        <!--网页-->
+        <scene sceneID="b5Q-wV-tA0">
+            <objects>
+                <viewController title="网页" id="0Fh-Ud-eAA" customClass="JHBWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYN-S2-dnW"/>
+                        <viewControllerLayoutGuide type="bottom" id="h6R-gf-Ut6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3G6-3Q-EbA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykH-YW-PeJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Fh-Ud-eAA" id="zso-hE-IR0"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="ykH-YW-PeJ" id="WEI-8O-Hpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxr-xk-fbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533.5" y="-613.5"/>
         </scene>
         <!--系统帖-->
         <scene sceneID="Euu-8A-3Mv">
@@ -55,38 +119,6 @@
             </objects>
             <point key="canvasLocation" x="533.5" y="107.5"/>
         </scene>
-        <!--个人帖-->
-        <scene sceneID="eoV-sH-hsy">
-            <objects>
-                <viewController title="个人帖" id="NWg-rn-dNH" customClass="JHBPersonInvitationViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Sr2-De-f5a"/>
-                        <viewControllerLayoutGuide type="bottom" id="GG3-7P-yFH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HVN-ee-hH1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bZ4-sB-5It">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="NWg-rn-dNH" id="MH2-v1-NlV"/>
-                                    <outlet property="delegate" destination="NWg-rn-dNH" id="FFt-Ml-Qqf"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="PersonBarTableView" destination="bZ4-sB-5It" id="8Po-E4-pJR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RZJ-7x-RfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="496.5" y="898.5"/>
-        </scene>
         <!--论坛-->
         <scene sceneID="ASU-aN-qVc">
             <objects>
@@ -105,4 +137,7 @@
             <point key="canvasLocation" x="-442" y="448"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="400" height="728"/>
+    </resources>
 </document>

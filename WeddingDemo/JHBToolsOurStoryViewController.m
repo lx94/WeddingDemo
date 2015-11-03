@@ -70,6 +70,7 @@
     UILabel *name = [[UILabel alloc]init];
     name.text = @"标题";
     name.font = NAMEFONT;
+    name.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
     name.frame = CGRectMake(KMargin, YMargin, 40.f, 30.f);
     [self.view addSubview:name];
     
@@ -90,6 +91,7 @@
     UILabel *text = [[UILabel alloc]init];
     text.text = @"内容";
     text.font = NAMEFONT;
+    text.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
     text.frame = CGRectMake(name.left, name.bottom + KMargin, name.width, name.height);
     [self.view addSubview:text];
     
@@ -97,6 +99,7 @@
     story.frame = CGRectMake(storyName.left, text.top, storyName.width, 240.f);
     story.textAlignment = NSTextAlignmentLeft;
     story.font = TEXTFONT;
+    story.alpha = 0.7;
     _story = story;
     [self.view addSubview:_story];
     
@@ -125,7 +128,8 @@
     [saveButton setTitle:@"保存" forState:UIControlStateNormal];
     saveButton.titleLabel.font = NAMEFONT;
     saveButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [saveButton setTitleColor:[UIColor colorWithRed:232.f/255.f green:110.f/255.f blue:201.f/255.f alpha:1] forState:UIControlStateNormal];
+    [saveButton setTitleColor:[UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1] forState:UIControlStateNormal];
+    [saveButton setTitleColor:[UIColor colorWithRed:111.f/255.f green:44.f/255.f blue:37.f/255.f alpha:1] forState:UIControlStateHighlighted];
     [saveButton addTarget:self action:@selector(saveButtonClick) forControlEvents:UIControlEventTouchUpInside];
     _saveButton = saveButton;
     [self.view addSubview:_saveButton];
@@ -149,7 +153,7 @@
 
 - (void)saveButtonClick
 {
-    
+    NSLog(@"...");
 }
 
 - (void)didReceiveMemoryWarning {
