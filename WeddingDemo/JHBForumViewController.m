@@ -8,11 +8,15 @@
 
 #import "JHBForumViewController.h"
 #import "JHBWebViewController.h"
+#import "UIView+Extension.h"
 
+#define kbuttonWith 80.f
 #define zhenaiNewUrl @"http://www.zhenai.com"
 #define xijieNewUrl @"http://www.likewed.com"
 #define jiujiuNewUrl @"http://www.99wed.com"
 #define hunqingNewUrl @"http://www.wedding86.com"
+#define buttontextColor [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1]
+
 
 @interface JHBForumViewController ()
 
@@ -33,9 +37,15 @@
 }
 -(void)setPersonBarButton{
     UIButton *personBarButton = [[UIButton alloc]init];
-    personBarButton.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-200.f, [UIScreen mainScreen].bounds.size.width, 44.f);
-    [personBarButton setTitle:@"大家说" forState:UIControlStateNormal];
-    [personBarButton setBackgroundColor:[UIColor orangeColor]];
+    
+    personBarButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-kbuttonWith)*0.5, [UIScreen mainScreen].bounds.size.height-240.f, kbuttonWith, kbuttonWith);
+    [personBarButton setBackgroundImage:[UIImage imageNamed:@"wedding_2"] forState:UIControlStateNormal];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(personBarButton.frame), CGRectGetMaxY(personBarButton.frame), kbuttonWith, 0.5*kbuttonWith)];
+    label.text = @"纪录幸福";
+    label.textColor = buttontextColor;
+    label.textAlignment = NSTextAlignmentCenter;
+
+    [self.view addSubview:label];
     [self.view addSubview:personBarButton];
     [personBarButton addTarget:self action:@selector(toPersonBarClicked:) forControlEvents:UIControlEventTouchUpInside];
 }

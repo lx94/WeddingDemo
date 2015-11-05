@@ -7,6 +7,8 @@
 //
 
 #import "JHBWebViewController.h"
+#import "MBProgressHUD+MoreExtension.h"
+#import <RDVTabBarController.h>
 
 @interface JHBWebViewController ()
 
@@ -24,6 +26,16 @@
     [self loadWebViewUrl:_url];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[self rdv_tabBarController]setTabBarHidden:YES];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    
+    [[self rdv_tabBarController]setTabBarHidden:NO];
+}
+
 // 添加webview
 - (void)setupWebview
 {
@@ -31,6 +43,7 @@
     webView.frame = self.view.bounds;
     [self.view addSubview:webView];
     self.webView = webView;
+    self.webView.delegate = self;
 }
 // 加载网页
 - (void)loadWebViewUrl:(NSString *)strUrl
@@ -46,6 +59,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    [MBProgressHUD showHUDAddedTo:self.webView LebelText:@"玩命加载中" animated:YES];
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [MBProgressHUD hideAllHUDsForView:self.webView animated:YES];
+}
+//-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+//    [MBProgressHUD showTipToWindow:@"网络出现错误"];
+//}
 
 
 @end

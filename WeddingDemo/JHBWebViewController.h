@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JHBWebViewController : UIViewController
+@interface JHBWebViewController : UIViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @property (nonatomic, copy) NSString *url;

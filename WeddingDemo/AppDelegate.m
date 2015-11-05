@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JHBHomeViewController.h"
 #import "JHBOpenPageViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"Q0VlJOo427C9QX1VaTkFzh52VmjxkVnDBiJ4Nsen"
+                  clientKey:@"Zkyj97Huo4sMLlL21qbdX2FfizoxSNChVcixohoN"];
     
     UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window = window;
@@ -41,14 +44,13 @@
     
     __weak AppDelegate *weakSelf = self;
     self.introductionView.didSelectedEnter = ^() {
-        [weakSelf.introductionView.view removeFromSuperview];
-        weakSelf.introductionView = nil;
         
-        JHBHomeViewController* homeVC = [[JHBHomeViewController alloc]init];
+        UIStoryboard* storyBoard=[UIStoryboard storyboardWithName:@"JHBLoginStoryboard" bundle:nil];
+        UINavigationController* homeVC =[storyBoard instantiateViewControllerWithIdentifier:@"navigation"];
         weakSelf.window.rootViewController = homeVC;
     };
     return YES;
-
+    
     
     return YES;
 }

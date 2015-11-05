@@ -6,7 +6,16 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pic" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="JHBPersonBarModel" representedClassName="JHBPersonBarModel" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="JHBHome" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="JHBPersonBarModel" positionX="-63" positionY="9" width="128" height="135"/>
     </elements>
 </model>

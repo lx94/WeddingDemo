@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JHBPersonBarMessageModel.h"
+
+#import "JHBPersonFrameModel.h"
 
 @interface JHBPersonBarTableViewCell : UITableViewCell
 //头像
@@ -27,8 +28,9 @@
 @property (weak,nonatomic)UILabel *count;
 
 @property (weak,nonatomic)UIImageView *imageUpView;
-@property (weak,nonatomic)UIImageView *imageDownView;
 
-@property (strong,nonatomic)JHBPersonBarMessageModel *personModel;
+
+
+@property (strong,nonatomic)JHBPersonFrameModel *personFrameModel;
 
 @end

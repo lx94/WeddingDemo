@@ -8,7 +8,8 @@
 
 #import "JHBPersonBarTableViewCell.h"
 #import "NSString+MoreExtentions.h"
-#import "JHBPersonBarMessageModel.h"
+#import <UIImageView+WebCache.h>
+
 
 #define kMiddleMagin 2.f
 #define kMagin 8.f
@@ -105,22 +106,31 @@
     [super layoutSubviews];
     _imageUpView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 3*kMagin);
 
-    _icon.frame = CGRectMake(kMagin, 3*kMagin, 44.f, 44.f);
+    _icon.frame = self.personFrameModel.iconFrame;
     _icon.layer.cornerRadius = _icon.frame.size.width*0.5;
     _icon.layer.masksToBounds = YES;
-    CGFloat nameFrameH = [_name.text heightForWidth:[UIScreen mainScreen].bounds.size.width Font:kBigFont];
-    CGFloat nameFrameW = [_name.text widthForWidth:[UIScreen mainScreen].bounds.size.width Font:kBigFont];
-    _name.frame = CGRectMake(CGRectGetMaxX(_icon.frame)+kMagin, CGRectGetMinY(_icon.frame)+2.f, nameFrameW, nameFrameH);
-    _text.frame = CGRectMake(CGRectGetMinX(_name.frame), CGRectGetMaxY(_name.frame)+kMagin, [UIScreen mainScreen].bounds.size.width-kMagin-CGRectGetMinX(_name.frame), [_text.text heightForWidth:[UIScreen mainScreen].bounds.size.width-kMagin-CGRectGetMinX(_name.frame) Font:kBigFont]);
-    _pics.frame = CGRectMake(CGRectGetMinX(_text.frame), CGRectGetMaxY(_text.frame)+kMagin, 200.f, 240.f);
     
-    CGFloat timeFrameH = [_time.text heightForWidth:[UIScreen mainScreen].bounds.size.width Font:kSmallFont];
-    CGFloat timeFrameW = [_time.text widthForWidth:[UIScreen mainScreen].bounds.size.width Font:kSmallFont];
-    _time.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -timeFrameW-2*kMagin,CGRectGetMinY(_name.frame), timeFrameW, timeFrameH);
+    _name.frame = self.personFrameModel.nameFrame;
+    _text.frame = self.personFrameModel.textFrame;
+    //_pics.frame = self.personFrameModel.picFrame;
     
-    _comment.frame = CGRectMake(CGRectGetMinX(_pics.frame), CGRectGetMaxY(_pics.frame)+kMagin, 20.f, 22.f);
-    _like.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100.f, CGRectGetMinY(_comment.frame), 20.f, 22.f);
-    _count.frame = CGRectMake(CGRectGetMaxX(_like.frame)+kMagin, CGRectGetMinY(_comment.frame), 60.f, 22.f);
+    _time.frame = self.personFrameModel.timeFrame;
+    
+    if (self.personFrameModel.personModel.pic==nil||self.personFrameModel.personModel.pic.length==0)
+    {
+        self.pics.frame=CGRectZero;
+        _comment.frame = CGRectMake(CGRectGetMinX(_text.frame), CGRectGetMaxY(_text.frame)+kMagin, 20.f, 22.f);
+        _like.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100.f, CGRectGetMinY(_comment.frame), 20.f, 22.f);
+        _count.frame = self.personFrameModel.countFrame;
+
+    }else{
+        _pics.frame = self.personFrameModel.picFrame;
+        _comment.frame = CGRectMake(CGRectGetMinX(_pics.frame), CGRectGetMaxY(_pics.frame)+kMagin, 20.f, 22.f);
+        _like.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100.f, CGRectGetMinY(_comment.frame), 20.f, 22.f);
+        _count.frame = self.personFrameModel.countFrame;
+    }
+
+    
     
 }
 #pragma mark 点赞评论点击事件
@@ -137,15 +147,17 @@
 }
 
 
--(void)setPersonModel:(JHBPersonBarMessageModel *)personModel{
-    _personModel = personModel;
+-(void)setPersonFrameModel:(JHBPersonFrameModel *)personFrameModel{
+    _personFrameModel = personFrameModel;
     
-    [self.icon setImage:[UIImage imageWithContentsOfFile:personModel.iconPath]];
-    //[self.pics setImage:[UIImage imageWithContentsOfFile:personModel.picsPath]];
-    [self.pics setImage:[UIImage imageNamed:personModel.picsPath]];
-    [self.name setText:personModel.name];
-    [self.text setText:personModel.text];
-    [self.time setText:personModel.time];
-    [self.count setText:personModel.count];
+    
+    [self.icon sd_setImageWithURL:[NSURL URLWithString:personFrameModel.personModel.icon] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    [self.pics sd_setImageWithURL:[NSURL URLWithString:personFrameModel.personModel.pic] placeholderImage:nil];
+    
+    
+    [self.name setText:personFrameModel.personModel.name];
+    [self.text setText:personFrameModel.personModel.text];
+    [self.time setText:personFrameModel.personModel.time];
+    [self.count setText:personFrameModel.personModel.count];
 }
 @end

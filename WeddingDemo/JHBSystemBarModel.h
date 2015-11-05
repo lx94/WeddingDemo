@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <Parse/Parse.h>
 @interface JHBSystemBarModel : NSObject
 
 @property (copy,nonatomic) NSString *essayTitle;
 @property (copy,nonatomic) NSString *authorName;
 @property (copy,nonatomic) NSString *essay;
-
+@property(strong,nonatomic)PFFile* icon;
 +(instancetype)systemBarModelWithDict:(NSDictionary *)dict;
 
 @end

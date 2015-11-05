@@ -9,17 +9,23 @@
 #import "JHBPersonInvitationTableViewController.h"
 #import "JHBPersonBarTableViewCell.h"
 #import "RRSendMessageViewController.h"
-#import "JHBPersonBarMessageModel.h"
+#import "JHBPersonFrameModel.h"
 #import <MJRefresh.h>
 #import <RDVTabBarController.h>
+#import <Parse/Parse.h>
+#import "MBProgressHUD+MoreExtension.h"
 
 @interface JHBPersonInvitationTableViewController ()
 
 @property (nonatomic, strong) UITextView *message;
 
+@property (strong,nonatomic) NSMutableArray *array;
+
 @end
 
 @implementation JHBPersonInvitationTableViewController
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -34,7 +40,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _array = [NSMutableArray array];
+    
     self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    
+    //刷新获取数据
+    self.tableView.header =
+    [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getMessages)];
+    [self.tableView.header beginRefreshing];
+    
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(getMessages)];
+    [self.tableView.footer beginRefreshing];
+
     
     //发送按钮
     UIButton*rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0,0,30,25)];
@@ -43,17 +61,9 @@
     UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem= rightItem;
     
-    
-    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    
-    
 }
 
-#pragma mark 下拉刷新
--(void)loadNewData{
-    
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,37 +99,79 @@
 {
     
     // Return the number of rows in the section.
-    return 10;
+    return self.array.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 356;
+    JHBPersonFrameModel *personFrameModel = self.array[indexPath.row];
+    return personFrameModel.cellHeight;
 }
 
 
 
 - (JHBPersonBarTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *dict = @{@"iconPath":@"icon_00.png",
-                           @"name":@"武大郎",
-                           @"text":@"好好学习天天向上",
-                           @"time":@"10小时前",
-                           @"picsPath":@"m1.png",
-                           @"count":@"1856"};
-    JHBPersonBarMessageModel *model = [JHBPersonBarMessageModel personBarMessageModelWithDict:dict];
+    JHBPersonFrameModel *personFrameModel = self.array[indexPath.row];
 
-    
     static NSString *CellIdentifier = @"personBarCell";
     JHBPersonBarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell ==nil) {
         cell = [[JHBPersonBarTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.personModel = model;
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.personFrameModel = personFrameModel;
+    
     
     // Configure the cell...
     
     return cell;
 }
 
+#pragma mark 获取信息
+-(void)getMessages{
+    static int num = 0;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES ];
+    PFQuery *query = [PFQuery queryWithClassName:@"personBarMessage"];
+    
+    [query  orderByDescending:@"createdAt"];
+    query.limit = 5;
+    query.skip = num;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        //3
+        if (!error) {
+            //Everything was correct, put the new objects and load the wall
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            NSArray * arr= [[NSArray alloc] initWithArray:objects];
+            //[self saveMessageWithArray:arr];
+            for (int i=0; i<arr.count; i++) {
+                JHBPersonModel *personModel = [JHBPersonModel personBarModelWithDict:arr[i]];
+                JHBPersonFrameModel *frameModel = [JHBPersonFrameModel personFrameModelWithPersonModel:personModel];
+                
+                [_array addObject:frameModel];
+                
+            }
+            [self.tableView reloadData];
+            if (arr.count<5) {
+                [self.tableView.footer noticeNoMoreData];
+                [self.tableView reloadData];
+            }else{
+                [self.tableView.footer endRefreshing];
+            }
+            [self.tableView.header endRefreshing];
+        } else {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+            //4
+            [MBProgressHUD showTipToWindow:@"网络连接有问题 请检查网络"];
+            [self.tableView.header endRefreshing];
+            [self.tableView.footer endRefreshing];
+        }
+    }];
+    
+    num +=5;
+    
+}
 @end

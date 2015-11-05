@@ -44,7 +44,7 @@
                           @"des":@"我最好？",
                           @"name":@"啥意思？",
                           @"count":@"1200"};
-    JHBHome * home=[JHBHome homePageWithDict:dict];
+    JHBHomeModel * home=[JHBHomeModel homePageWithDict:dict];
     for (int i=0; i<=9; i++) {
         [_homes addObject:home];
     }
@@ -63,14 +63,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 10;//self.homes.count;
+    return self.homes.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JHBHomePageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" forIndexPath:indexPath];
     
-    cell.home=self.homes[indexPath.row];
+    cell.homeModel=self.homes[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;

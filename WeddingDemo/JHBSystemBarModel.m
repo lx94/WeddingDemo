@@ -16,6 +16,7 @@
         model.essayTitle = [dict objectForKey:@"essayTitle"];
         model.authorName = [dict objectForKey:@"authorName"];
         model.essay = [dict objectForKey:@"essay"];
+        model.icon=[dict objectForKey:@"image"];
     }
     return model;
 }

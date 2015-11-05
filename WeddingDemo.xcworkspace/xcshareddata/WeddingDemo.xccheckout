@@ -10,6 +10,8 @@
 	<string>WeddingDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>75882F426858A9393728071F84ED3FA8CFBB7B03</key>
+		<string>ssh://github.com/18042676568/HS.git</string>
 		<key>D60C1FF1929E7BD1307EF01677A8B32221041452</key>
 		<string>ssh://github.com/lx94/WeddingDemo.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>WeddingDemo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>75882F426858A9393728071F84ED3FA8CFBB7B03</key>
+		<string>../../Desktop/HS</string>
 		<key>D60C1FF1929E7BD1307EF01677A8B32221041452</key>
 		<string>..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>D60C1FF1929E7BD1307EF01677A8B32221041452</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>75882F426858A9393728071F84ED3FA8CFBB7B03</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HS</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
