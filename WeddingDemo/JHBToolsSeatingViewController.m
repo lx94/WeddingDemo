@@ -7,8 +7,12 @@
 //
 
 #import "JHBToolsSeatingViewController.h"
+#import <Parse/Parse.h>
 
 @interface JHBToolsSeatingViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *seatingTableView;
+@property (strong, nonatomic) NSMutableArray *muArray;
 
 @end
 
@@ -23,6 +27,28 @@
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(leftAddClick)];
     self.navigationItem.leftBarButtonItem = leftButton;
+    
+    self.seatingTableView.backgroundColor = [UIColor clearColor];
+    self.seatingTableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    
+    self.seatingTableView.delegate = self;
+}
+
+-(NSMutableArray *)muArray
+{
+    if (_muArray == nil)
+    {
+        _muArray = [NSMutableArray array];
+        NSArray * array = _array;
+        for (int i=0; i<array.count; i++)
+        {
+            NSDictionary *dict=array[i];
+            JHBSeat *msgModel = [JHBSeat seatMsgModelWithDict:dict];
+            JHBSeatFrameModel *frameModel = [JHBSeatFrameModel seatFrameModel:msgModel];
+            [_muArray addObject:frameModel];
+        }
+    }
+    return _muArray;
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -89,20 +115,40 @@
     }
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
-- (void)didReceiveMemoryWarning {
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.muArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    JHBToolsSeatViewCell *cell = [JHBToolsSeatViewCell seatTableViewCellWithTableView:tableView];
+    cell.frameModel = self.muArray[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    JHBSeatFrameModel *msgFrameModel=self.muArray[indexPath.row];
+    return msgFrameModel.cellHeight;
 }
-*/
 
 @end

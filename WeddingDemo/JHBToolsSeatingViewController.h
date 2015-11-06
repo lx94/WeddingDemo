@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataMngTool.h"
+#import "JHBSeat.h"
+#import "JHBSeatFrameModel.h"
+#import "JHBToolsSeatViewCell.h"
 
-@interface JHBToolsSeatingViewController : UIViewController<UIActionSheetDelegate,UISearchBarDelegate>
+@interface JHBToolsSeatingViewController : UIViewController<UIActionSheetDelegate,UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray  *array;
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "JHBToolsViewController.h"
-
+#import "JHBToolsLoveJourneyViewController.h"
+#import <Parse/Parse.h>
+#import "JHBToolsSeatingViewController.h"
 #define PRAISEFONT [UIFont systemFontOfSize:12.f]
 
 @interface JHBToolsViewController ()
@@ -38,15 +40,6 @@
     [self.view addSubview:praiseView];
     _praiseBGView.hidden = YES;
     _praiseView.hidden = YES;
-    
-//    UILabel *addLabel = [[UILabel alloc]init];
-//    _addLabel = addLabel;
-//    _addLabel.text = @"+1";
-//    _addLabel.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];
-//    _addLabel.frame = CGRectMake(_praiseBGView.right, _praiseBGView.top, 20.f, _praiseBGView.height);
-//    _addLabel.hidden = YES;
-//    _addLabel.alpha = 1.0f;
-//    [self.view addSubview:_addLabel];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -91,35 +84,32 @@
         switch (i)
         {
             case 0:
-                [toolsButton setTitle:@"良辰吉日" forState:UIControlStateNormal];
                 break;
             case 1:
-                [toolsButton setTitle:@"婚姻登记" forState:UIControlStateNormal];
+                [toolsButton setTitle:@"良辰吉日" forState:UIControlStateNormal];
+                [toolsButton addTarget:self action:@selector(LuckyDateClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 2:
-                [toolsButton setTitle:@"恋爱旅程" forState:UIControlStateNormal];
-                [toolsButton addTarget:self action:@selector(loveJourneyClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 3:
                 [toolsButton setTitle:@"完美策划" forState:UIControlStateNormal];
                 [toolsButton addTarget:self action:@selector(planingClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 4:
-                [toolsButton setTitle:@"遇见幸福" forState:UIControlStateNormal];
+                [toolsButton setTitle:@"给个赞呗" forState:UIControlStateNormal];
+                [toolsButton addTarget:self action:@selector(lovedClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 5:
-                [toolsButton setTitle:@"诚挚邀请" forState:UIControlStateNormal];
+                [toolsButton setTitle:@"恋爱旅程" forState:UIControlStateNormal];
+                [toolsButton addTarget:self action:@selector(loveJourneyClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 6:
-                [toolsButton setTitle:@"结婚流程" forState:UIControlStateNormal];
                 break;
             case 7:
                 [toolsButton setTitle:@"座位安排" forState:UIControlStateNormal];
                 [toolsButton addTarget:self action:@selector(seatingClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 8:
-                [toolsButton setTitle:@"给个赞呗" forState:UIControlStateNormal];
-                [toolsButton addTarget:self action:@selector(lovedClicked) forControlEvents:UIControlEventTouchUpInside];
                 break;
             default:
                 break;
@@ -172,17 +162,45 @@
 
 - (void)seatingClicked
 {
-    [self performSegueWithIdentifier:@"toSeating" sender:nil];
+    PFQuery * query = [PFQuery queryWithClassName:@"JHBToolsSeating"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * objects,NSError * error){
+        if(!error){
+            NSLog(@"%@",objects);
+            [self performSegueWithIdentifier:@"toSeating" sender:objects];
+        }}];
 }
 
 - (void)loveJourneyClicked
 {
     [self performSegueWithIdentifier:@"toLoveJourney" sender:nil];
+    
 }
 
 - (void)planingClicked
 {
     [self performSegueWithIdentifier:@"toPlaningPage" sender:nil];
+}
+
+- (void)LuckyDateClicked
+{
+    [self performSegueWithIdentifier:@"toLuckyDate" sender:nil];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[JHBToolsLuckyDateViewController class]])
+    {
+        JHBToolsLuckyDateViewController *luckyDate = segue.destinationViewController;
+        luckyDate.url = @"http://wnl.chemdrug.com";
+    }
+//    if ([segue.destinationViewController isKindOfClass:[JHBToolsLoveJourneyViewController class]]) {
+//        JHBToolsLoveJourneyViewController * loveVC=segue.destinationViewController;
+//        loveVC.array=sender;
+//    }
+    if ([segue.destinationViewController isKindOfClass:[JHBToolsSeatingViewController class]]) {
+        JHBToolsSeatingViewController * SeatVC=segue.destinationViewController;
+        SeatVC.array=sender;
+    }
 }
 
 - (void)lovedClicked
@@ -195,20 +213,6 @@
 
 - (void)toolsPraiseViewDidPraiseButtonClicked:(UIButton *)sender
 {
-//    [UIView animateWithDuration:1.f animations:^{
-//        _addLabel.frame = CGRectMake(_praiseBGView.right+TOOLBUTTONWIDTH*0.5, _heightLine.bottom, 20.f, _praiseBGView.height);
-//        _addLabel.alpha = 0.0f;
-//        _addLabel.hidden = NO;
-//        sender.enabled = NO;
-//        int oldCount = [_praiseCount.text intValue];
-//        int newCount = oldCount+1;
-//        _praiseCount.text = [NSString stringWithFormat:@"%d",newCount];
-//    } completion:^(BOOL finished) {
-//        _addLabel.frame = CGRectMake(_praiseBGView.right, _praiseBGView.top, 20.f, _praiseBGView.height);
-//        _addLabel.alpha = 1.0f;
-//        sender.enabled = YES;
-//        _addLabel.hidden = YES;
-//    }];
     UILabel *addLabel = [[UILabel alloc]init];
     addLabel.text = @"+1";
     addLabel.textColor = [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1];

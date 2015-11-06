@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataMngTool.h"
+#import "JHBStory.h" 
+#import "JHBStoryFrameModel.h"
+#import "JHBToolsOurStoryViewController.h"
 
-@interface JHBToolsLoveJourneyViewController : UIViewController
+@interface JHBToolsLoveJourneyViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+
 
 @end

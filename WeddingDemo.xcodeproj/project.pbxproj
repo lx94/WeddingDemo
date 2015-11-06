@@ -10,17 +10,6 @@
 		81BB1550A8685C1FAA836CAF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC57337F79B2E6D4C6CFBB25 /* libPods.a */; };
 		C705ADC51BE6F54C00E84C74 /* JHBHomePageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADC41BE6F54C00E84C74 /* JHBHomePageTableViewController.m */; };
 		C705ADCB1BE7041C00E84C74 /* JHBHomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADCA1BE7041C00E84C74 /* JHBHomePageTableViewCell.m */; };
-		C705ADD61BE7598900E84C74 /* JHBToolsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADD21BE7598900E84C74 /* JHBToolsButton.m */; };
-		C705ADD71BE7598900E84C74 /* JHBToolsPraiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADD41BE7598900E84C74 /* JHBToolsPraiseView.m */; };
-		C705ADD81BE7598900E84C74 /* JHBToolsPraiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C705ADD51BE7598900E84C74 /* JHBToolsPraiseView.xib */; };
-		C705ADE81BE75A9500E84C74 /* JHBTools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C705ADD91BE75A9500E84C74 /* JHBTools.storyboard */; };
-		C705ADE91BE75A9500E84C74 /* JHBToolsAddSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADDB1BE75A9500E84C74 /* JHBToolsAddSeatingViewController.m */; };
-		C705ADEA1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADDD1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.m */; };
-		C705ADEB1BE75A9500E84C74 /* JHBToolsOurStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADDF1BE75A9500E84C74 /* JHBToolsOurStoryViewController.m */; };
-		C705ADEC1BE75A9500E84C74 /* JHBToolsPlaningTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADE11BE75A9500E84C74 /* JHBToolsPlaningTextViewController.m */; };
-		C705ADED1BE75A9500E84C74 /* JHBToolsPlaningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADE31BE75A9500E84C74 /* JHBToolsPlaningViewController.m */; };
-		C705ADEE1BE75A9500E84C74 /* JHBToolsSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADE51BE75A9500E84C74 /* JHBToolsSeatingViewController.m */; };
-		C705ADEF1BE75A9500E84C74 /* JHBToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADE71BE75A9500E84C74 /* JHBToolsViewController.m */; };
 		C705ADF31BE75B3C00E84C74 /* JHBOpenPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADF21BE75B3C00E84C74 /* JHBOpenPageViewController.m */; };
 		C705ADFA1BE7800100E84C74 /* JHBSystemBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C705ADF91BE7800100E84C74 /* JHBSystemBarModel.m */; };
 		C729B03C1BA91593006E9775 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C729B03B1BA91593006E9775 /* main.m */; };
@@ -37,6 +26,36 @@
 		C75B24B11BD50F8A00A7FD80 /* UICollectionViewCellPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = C75B24AD1BD50F8A00A7FD80 /* UICollectionViewCellPhoto.m */; };
 		C75B24B41BD5195A00A7FD80 /* JHBPersonInvitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75B24B31BD5195A00A7FD80 /* JHBPersonInvitationTableViewController.m */; };
 		C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */; };
+		C781C94D1BECDE3B00AE1F2E /* JHBToolsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9431BECDE3B00AE1F2E /* JHBToolsButton.m */; };
+		C781C94E1BECDE3B00AE1F2E /* JHBToolsPlaningButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9451BECDE3B00AE1F2E /* JHBToolsPlaningButton.m */; };
+		C781C94F1BECDE3B00AE1F2E /* JHBToolsPraiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9471BECDE3B00AE1F2E /* JHBToolsPraiseView.m */; };
+		C781C9501BECDE3B00AE1F2E /* JHBToolsPraiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C781C9481BECDE3B00AE1F2E /* JHBToolsPraiseView.xib */; };
+		C781C9511BECDE3B00AE1F2E /* JHBToolsSeatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C94A1BECDE3B00AE1F2E /* JHBToolsSeatViewCell.m */; };
+		C781C9521BECDE3B00AE1F2E /* JHBToolsStoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C94C1BECDE3B00AE1F2E /* JHBToolsStoryViewCell.m */; };
+		C781C9581BECDE8100AE1F2E /* JHBPlaning.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9571BECDE8100AE1F2E /* JHBPlaning.m */; };
+		C781C95D1BECDE8E00AE1F2E /* JHBStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C95A1BECDE8E00AE1F2E /* JHBStory.m */; };
+		C781C95E1BECDE8E00AE1F2E /* JHBStoryFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C95C1BECDE8E00AE1F2E /* JHBStoryFrameModel.m */; };
+		C781C9631BECDE9B00AE1F2E /* JHBSeat.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9601BECDE9B00AE1F2E /* JHBSeat.m */; };
+		C781C9641BECDE9B00AE1F2E /* JHBSeatFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9621BECDE9B00AE1F2E /* JHBSeatFrameModel.m */; };
+		C781C9671BECDF1400AE1F2E /* JHBTools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C781C9661BECDF1400AE1F2E /* JHBTools.storyboard */; };
+		C781C96F1BECDF6300AE1F2E /* JHBToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C96E1BECDF6300AE1F2E /* JHBToolsViewController.m */; };
+		C781C9721BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9711BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.m */; };
+		C781C9751BECDF7F00AE1F2E /* JHBToolsPlaningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9741BECDF7F00AE1F2E /* JHBToolsPlaningViewController.m */; };
+		C781C97A1BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9771BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.m */; };
+		C781C97B1BECDF9900AE1F2E /* JHBToolsOurStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9791BECDF9900AE1F2E /* JHBToolsOurStoryViewController.m */; };
+		C781C9801BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C97D1BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.m */; };
+		C781C9811BECDFAA00AE1F2E /* JHBToolsSeatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C97F1BECDFAA00AE1F2E /* JHBToolsSeatingViewController.m */; };
+		C781C9851BECE1AF00AE1F2E /* CoreDataMngTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9841BECE1AF00AE1F2E /* CoreDataMngTool.m */; };
+		C781C98A1BECE6F000AE1F2E /* JHBMeMarriedDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9871BECE6F000AE1F2E /* JHBMeMarriedDateView.m */; };
+		C781C98B1BECE6F000AE1F2E /* JHBMeUserNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9891BECE6F000AE1F2E /* JHBMeUserNameView.m */; };
+		C781C98F1BECE71500AE1F2E /* JHBMeMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C98E1BECE71500AE1F2E /* JHBMeMessageModel.m */; };
+		C781C99D1BECE74900AE1F2E /* JHBMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C781C9901BECE74900AE1F2E /* JHBMe.storyboard */; };
+		C781C99E1BECE74900AE1F2E /* JHBMeEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9921BECE74900AE1F2E /* JHBMeEditViewController.m */; };
+		C781C99F1BECE74900AE1F2E /* JHBMeMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9941BECE74900AE1F2E /* JHBMeMainViewController.m */; };
+		C781C9A01BECE74900AE1F2E /* JHBMeMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9961BECE74900AE1F2E /* JHBMeMessageViewController.m */; };
+		C781C9A11BECE74900AE1F2E /* JHBMeNewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C9981BECE74900AE1F2E /* JHBMeNewMessageViewController.m */; };
+		C781C9A21BECE74900AE1F2E /* JHBMeSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C99A1BECE74900AE1F2E /* JHBMeSaveViewController.m */; };
+		C781C9A31BECE74900AE1F2E /* JHBMeSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C781C99C1BECE74900AE1F2E /* JHBMeSetViewController.m */; };
 		C7852BF91BE996240026AFB3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852BF71BE996240026AFB3 /* Bolts.framework */; };
 		C7852BFA1BE996240026AFB3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852BF81BE996240026AFB3 /* Parse.framework */; };
 		C7852C051BE999A20026AFB3 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852C041BE999A20026AFB3 /* libstdc++.6.dylib */; };
@@ -57,13 +76,6 @@
 		C7852C2A1BE9F7FE0026AFB3 /* JHBPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7852C291BE9F7FE0026AFB3 /* JHBPersonModel.m */; };
 		C7852C2D1BEA27910026AFB3 /* NSString+DateTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = C7852C2C1BEA27910026AFB3 /* NSString+DateTransform.m */; };
 		C78AA06F1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78AA06E1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m */; };
-		C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */; };
-		C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */; };
-		C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */; };
-		C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */; };
-		C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */; };
-		C7A65D5C1BAAD4F300B5CBA5 /* JHBFavourateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */; };
-		C7A65D5D1BAAD4F300B5CBA5 /* JHBOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */; };
 		C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */; };
 		C7A9B0B41BCD268700F3F6A0 /* JHBPersonBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A9B0B31BCD268700F3F6A0 /* JHBPersonBarTableViewCell.m */; };
 		C7BBFBA21BB172860004C1B9 /* NSString+MoreExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BBFBA11BB172860004C1B9 /* NSString+MoreExtentions.m */; };
@@ -95,26 +107,6 @@
 		C705ADC41BE6F54C00E84C74 /* JHBHomePageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageTableViewController.m; sourceTree = "<group>"; };
 		C705ADC91BE7041C00E84C74 /* JHBHomePageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomePageTableViewCell.h; sourceTree = "<group>"; };
 		C705ADCA1BE7041C00E84C74 /* JHBHomePageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomePageTableViewCell.m; sourceTree = "<group>"; };
-		C705ADD11BE7598900E84C74 /* JHBToolsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsButton.h; sourceTree = "<group>"; };
-		C705ADD21BE7598900E84C74 /* JHBToolsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsButton.m; sourceTree = "<group>"; };
-		C705ADD31BE7598900E84C74 /* JHBToolsPraiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPraiseView.h; sourceTree = "<group>"; };
-		C705ADD41BE7598900E84C74 /* JHBToolsPraiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPraiseView.m; sourceTree = "<group>"; };
-		C705ADD51BE7598900E84C74 /* JHBToolsPraiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHBToolsPraiseView.xib; sourceTree = "<group>"; };
-		C705ADD91BE75A9500E84C74 /* JHBTools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBTools.storyboard; sourceTree = "<group>"; };
-		C705ADDA1BE75A9500E84C74 /* JHBToolsAddSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsAddSeatingViewController.h; sourceTree = "<group>"; };
-		C705ADDB1BE75A9500E84C74 /* JHBToolsAddSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsAddSeatingViewController.m; sourceTree = "<group>"; };
-		C705ADDC1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsLoveJourneyViewController.h; sourceTree = "<group>"; };
-		C705ADDD1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsLoveJourneyViewController.m; sourceTree = "<group>"; };
-		C705ADDE1BE75A9500E84C74 /* JHBToolsOurStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsOurStoryViewController.h; sourceTree = "<group>"; };
-		C705ADDF1BE75A9500E84C74 /* JHBToolsOurStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsOurStoryViewController.m; sourceTree = "<group>"; };
-		C705ADE01BE75A9500E84C74 /* JHBToolsPlaningTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPlaningTextViewController.h; sourceTree = "<group>"; };
-		C705ADE11BE75A9500E84C74 /* JHBToolsPlaningTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPlaningTextViewController.m; sourceTree = "<group>"; };
-		C705ADE21BE75A9500E84C74 /* JHBToolsPlaningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPlaningViewController.h; sourceTree = "<group>"; };
-		C705ADE31BE75A9500E84C74 /* JHBToolsPlaningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPlaningViewController.m; sourceTree = "<group>"; };
-		C705ADE41BE75A9500E84C74 /* JHBToolsSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsSeatingViewController.h; sourceTree = "<group>"; };
-		C705ADE51BE75A9500E84C74 /* JHBToolsSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsSeatingViewController.m; sourceTree = "<group>"; };
-		C705ADE61BE75A9500E84C74 /* JHBToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsViewController.h; sourceTree = "<group>"; };
-		C705ADE71BE75A9500E84C74 /* JHBToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsViewController.m; sourceTree = "<group>"; };
 		C705ADF11BE75B3C00E84C74 /* JHBOpenPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBOpenPageViewController.h; sourceTree = "<group>"; };
 		C705ADF21BE75B3C00E84C74 /* JHBOpenPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBOpenPageViewController.m; sourceTree = "<group>"; };
 		C705ADF81BE7800100E84C74 /* JHBSystemBarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSystemBarModel.h; sourceTree = "<group>"; };
@@ -144,6 +136,63 @@
 		C75B24B31BD5195A00A7FD80 /* JHBPersonInvitationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBPersonInvitationTableViewController.m; sourceTree = "<group>"; };
 		C76628EC1BA948EE00E11F12 /* JHBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBHomeViewController.h; sourceTree = "<group>"; };
 		C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomeViewController.m; sourceTree = "<group>"; };
+		C781C9421BECDE3B00AE1F2E /* JHBToolsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsButton.h; sourceTree = "<group>"; };
+		C781C9431BECDE3B00AE1F2E /* JHBToolsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsButton.m; sourceTree = "<group>"; };
+		C781C9441BECDE3B00AE1F2E /* JHBToolsPlaningButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPlaningButton.h; sourceTree = "<group>"; };
+		C781C9451BECDE3B00AE1F2E /* JHBToolsPlaningButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPlaningButton.m; sourceTree = "<group>"; };
+		C781C9461BECDE3B00AE1F2E /* JHBToolsPraiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPraiseView.h; sourceTree = "<group>"; };
+		C781C9471BECDE3B00AE1F2E /* JHBToolsPraiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPraiseView.m; sourceTree = "<group>"; };
+		C781C9481BECDE3B00AE1F2E /* JHBToolsPraiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHBToolsPraiseView.xib; sourceTree = "<group>"; };
+		C781C9491BECDE3B00AE1F2E /* JHBToolsSeatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsSeatViewCell.h; sourceTree = "<group>"; };
+		C781C94A1BECDE3B00AE1F2E /* JHBToolsSeatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsSeatViewCell.m; sourceTree = "<group>"; };
+		C781C94B1BECDE3B00AE1F2E /* JHBToolsStoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsStoryViewCell.h; sourceTree = "<group>"; };
+		C781C94C1BECDE3B00AE1F2E /* JHBToolsStoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsStoryViewCell.m; sourceTree = "<group>"; };
+		C781C9561BECDE8100AE1F2E /* JHBPlaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBPlaning.h; sourceTree = "<group>"; };
+		C781C9571BECDE8100AE1F2E /* JHBPlaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBPlaning.m; sourceTree = "<group>"; };
+		C781C9591BECDE8E00AE1F2E /* JHBStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBStory.h; sourceTree = "<group>"; };
+		C781C95A1BECDE8E00AE1F2E /* JHBStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBStory.m; sourceTree = "<group>"; };
+		C781C95B1BECDE8E00AE1F2E /* JHBStoryFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBStoryFrameModel.h; sourceTree = "<group>"; };
+		C781C95C1BECDE8E00AE1F2E /* JHBStoryFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBStoryFrameModel.m; sourceTree = "<group>"; };
+		C781C95F1BECDE9B00AE1F2E /* JHBSeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSeat.h; sourceTree = "<group>"; };
+		C781C9601BECDE9B00AE1F2E /* JHBSeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBSeat.m; sourceTree = "<group>"; };
+		C781C9611BECDE9B00AE1F2E /* JHBSeatFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSeatFrameModel.h; sourceTree = "<group>"; };
+		C781C9621BECDE9B00AE1F2E /* JHBSeatFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBSeatFrameModel.m; sourceTree = "<group>"; };
+		C781C9661BECDF1400AE1F2E /* JHBTools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBTools.storyboard; sourceTree = "<group>"; };
+		C781C96D1BECDF6300AE1F2E /* JHBToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsViewController.h; sourceTree = "<group>"; };
+		C781C96E1BECDF6300AE1F2E /* JHBToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsViewController.m; sourceTree = "<group>"; };
+		C781C9701BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsLuckyDateViewController.h; sourceTree = "<group>"; };
+		C781C9711BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsLuckyDateViewController.m; sourceTree = "<group>"; };
+		C781C9731BECDF7F00AE1F2E /* JHBToolsPlaningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsPlaningViewController.h; sourceTree = "<group>"; };
+		C781C9741BECDF7F00AE1F2E /* JHBToolsPlaningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsPlaningViewController.m; sourceTree = "<group>"; };
+		C781C9761BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsLoveJourneyViewController.h; sourceTree = "<group>"; };
+		C781C9771BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsLoveJourneyViewController.m; sourceTree = "<group>"; };
+		C781C9781BECDF9900AE1F2E /* JHBToolsOurStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsOurStoryViewController.h; sourceTree = "<group>"; };
+		C781C9791BECDF9900AE1F2E /* JHBToolsOurStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsOurStoryViewController.m; sourceTree = "<group>"; };
+		C781C97C1BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsAddSeatingViewController.h; sourceTree = "<group>"; };
+		C781C97D1BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsAddSeatingViewController.m; sourceTree = "<group>"; };
+		C781C97E1BECDFAA00AE1F2E /* JHBToolsSeatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBToolsSeatingViewController.h; sourceTree = "<group>"; };
+		C781C97F1BECDFAA00AE1F2E /* JHBToolsSeatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBToolsSeatingViewController.m; sourceTree = "<group>"; };
+		C781C9831BECE1AF00AE1F2E /* CoreDataMngTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataMngTool.h; sourceTree = "<group>"; };
+		C781C9841BECE1AF00AE1F2E /* CoreDataMngTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataMngTool.m; sourceTree = "<group>"; };
+		C781C9861BECE6F000AE1F2E /* JHBMeMarriedDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeMarriedDateView.h; sourceTree = "<group>"; };
+		C781C9871BECE6F000AE1F2E /* JHBMeMarriedDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeMarriedDateView.m; sourceTree = "<group>"; };
+		C781C9881BECE6F000AE1F2E /* JHBMeUserNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeUserNameView.h; sourceTree = "<group>"; };
+		C781C9891BECE6F000AE1F2E /* JHBMeUserNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeUserNameView.m; sourceTree = "<group>"; };
+		C781C98D1BECE71500AE1F2E /* JHBMeMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeMessageModel.h; sourceTree = "<group>"; };
+		C781C98E1BECE71500AE1F2E /* JHBMeMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeMessageModel.m; sourceTree = "<group>"; };
+		C781C9901BECE74900AE1F2E /* JHBMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBMe.storyboard; sourceTree = "<group>"; };
+		C781C9911BECE74900AE1F2E /* JHBMeEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeEditViewController.h; sourceTree = "<group>"; };
+		C781C9921BECE74900AE1F2E /* JHBMeEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeEditViewController.m; sourceTree = "<group>"; };
+		C781C9931BECE74900AE1F2E /* JHBMeMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeMainViewController.h; sourceTree = "<group>"; };
+		C781C9941BECE74900AE1F2E /* JHBMeMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeMainViewController.m; sourceTree = "<group>"; };
+		C781C9951BECE74900AE1F2E /* JHBMeMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeMessageViewController.h; sourceTree = "<group>"; };
+		C781C9961BECE74900AE1F2E /* JHBMeMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeMessageViewController.m; sourceTree = "<group>"; };
+		C781C9971BECE74900AE1F2E /* JHBMeNewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeNewMessageViewController.h; sourceTree = "<group>"; };
+		C781C9981BECE74900AE1F2E /* JHBMeNewMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeNewMessageViewController.m; sourceTree = "<group>"; };
+		C781C9991BECE74900AE1F2E /* JHBMeSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeSaveViewController.h; sourceTree = "<group>"; };
+		C781C99A1BECE74900AE1F2E /* JHBMeSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeSaveViewController.m; sourceTree = "<group>"; };
+		C781C99B1BECE74900AE1F2E /* JHBMeSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeSetViewController.h; sourceTree = "<group>"; };
+		C781C99C1BECE74900AE1F2E /* JHBMeSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeSetViewController.m; sourceTree = "<group>"; };
 		C7852BF71BE996240026AFB3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C7852BF81BE996240026AFB3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C7852C041BE999A20026AFB3 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
@@ -169,18 +218,6 @@
 		C7852C2C1BEA27910026AFB3 /* NSString+DateTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DateTransform.m"; path = "../../../Desktop/HS/HomeSchool/NSString+DateTransform.m"; sourceTree = "<group>"; };
 		C78AA06D1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBSystemInvitationTableViewController.h; sourceTree = "<group>"; };
 		C78AA06E1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBSystemInvitationTableViewController.m; sourceTree = "<group>"; };
-		C7A65D4A1BAAC81200B5CBA5 /* JHBMeFavourateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeFavourateView.h; sourceTree = "<group>"; };
-		C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeFavourateView.m; sourceTree = "<group>"; };
-		C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHBMeFavourateView.xib; sourceTree = "<group>"; };
-		C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBMe.storyboard; sourceTree = "<group>"; };
-		C7A65D511BAAD4A600B5CBA5 /* JHBMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBMeTableViewController.h; sourceTree = "<group>"; };
-		C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBMeTableViewController.m; sourceTree = "<group>"; };
-		C7A65D551BAAD4CF00B5CBA5 /* JHBCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBCategoryViewController.h; sourceTree = "<group>"; };
-		C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBCategoryViewController.m; sourceTree = "<group>"; };
-		C7A65D581BAAD4F300B5CBA5 /* JHBFavourateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBFavourateViewController.h; sourceTree = "<group>"; };
-		C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBFavourateViewController.m; sourceTree = "<group>"; };
-		C7A65D5A1BAAD4F300B5CBA5 /* JHBOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBOrderViewController.h; sourceTree = "<group>"; };
-		C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBOrderViewController.m; sourceTree = "<group>"; };
 		C7A65D6D1BAAD5EB00B5CBA5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C7A65D6E1BAAD5EB00B5CBA5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C7A9B0B21BCD268700F3F6A0 /* JHBPersonBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBPersonBarTableViewCell.h; sourceTree = "<group>"; };
@@ -287,11 +324,17 @@
 		C705ADD01BE7593A00E84C74 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
-				C705ADD11BE7598900E84C74 /* JHBToolsButton.h */,
-				C705ADD21BE7598900E84C74 /* JHBToolsButton.m */,
-				C705ADD31BE7598900E84C74 /* JHBToolsPraiseView.h */,
-				C705ADD41BE7598900E84C74 /* JHBToolsPraiseView.m */,
-				C705ADD51BE7598900E84C74 /* JHBToolsPraiseView.xib */,
+				C781C9421BECDE3B00AE1F2E /* JHBToolsButton.h */,
+				C781C9431BECDE3B00AE1F2E /* JHBToolsButton.m */,
+				C781C9441BECDE3B00AE1F2E /* JHBToolsPlaningButton.h */,
+				C781C9451BECDE3B00AE1F2E /* JHBToolsPlaningButton.m */,
+				C781C9461BECDE3B00AE1F2E /* JHBToolsPraiseView.h */,
+				C781C9471BECDE3B00AE1F2E /* JHBToolsPraiseView.m */,
+				C781C9481BECDE3B00AE1F2E /* JHBToolsPraiseView.xib */,
+				C781C9491BECDE3B00AE1F2E /* JHBToolsSeatViewCell.h */,
+				C781C94A1BECDE3B00AE1F2E /* JHBToolsSeatViewCell.m */,
+				C781C94B1BECDE3B00AE1F2E /* JHBToolsStoryViewCell.h */,
+				C781C94C1BECDE3B00AE1F2E /* JHBToolsStoryViewCell.m */,
 			);
 			name = "工具";
 			sourceTree = "<group>";
@@ -348,6 +391,7 @@
 		C729B0381BA91593006E9775 /* WeddingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C781C9821BECE18B00AE1F2E /* Tools */,
 				C7852BF61BE996100026AFB3 /* FrameWork */,
 				C76628F11BA94DC700E11F12 /* Category */,
 				C76628F01BA94DA800E11F12 /* Views */,
@@ -452,21 +496,12 @@
 		C729B0681BA916B1006E9775 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
-				C705ADD91BE75A9500E84C74 /* JHBTools.storyboard */,
-				C705ADDA1BE75A9500E84C74 /* JHBToolsAddSeatingViewController.h */,
-				C705ADDB1BE75A9500E84C74 /* JHBToolsAddSeatingViewController.m */,
-				C705ADDC1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.h */,
-				C705ADDD1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.m */,
-				C705ADDE1BE75A9500E84C74 /* JHBToolsOurStoryViewController.h */,
-				C705ADDF1BE75A9500E84C74 /* JHBToolsOurStoryViewController.m */,
-				C705ADE01BE75A9500E84C74 /* JHBToolsPlaningTextViewController.h */,
-				C705ADE11BE75A9500E84C74 /* JHBToolsPlaningTextViewController.m */,
-				C705ADE21BE75A9500E84C74 /* JHBToolsPlaningViewController.h */,
-				C705ADE31BE75A9500E84C74 /* JHBToolsPlaningViewController.m */,
-				C705ADE41BE75A9500E84C74 /* JHBToolsSeatingViewController.h */,
-				C705ADE51BE75A9500E84C74 /* JHBToolsSeatingViewController.m */,
-				C705ADE61BE75A9500E84C74 /* JHBToolsViewController.h */,
-				C705ADE71BE75A9500E84C74 /* JHBToolsViewController.m */,
+				C781C96C1BECDF4400AE1F2E /* 座位安排 */,
+				C781C96B1BECDF3C00AE1F2E /* 恋爱旅程 */,
+				C781C96A1BECDF3400AE1F2E /* 婚礼策划 */,
+				C781C9691BECDF2700AE1F2E /* 良辰吉日 */,
+				C781C9681BECDF1D00AE1F2E /* 工具主页 */,
+				C781C9661BECDF1400AE1F2E /* JHBTools.storyboard */,
 			);
 			name = "工具";
 			sourceTree = "<group>";
@@ -474,15 +509,19 @@
 		C729B0691BA916B8006E9775 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
-				C7A65D501BAAD4A600B5CBA5 /* JHBMe.storyboard */,
-				C7A65D511BAAD4A600B5CBA5 /* JHBMeTableViewController.h */,
-				C7A65D521BAAD4A600B5CBA5 /* JHBMeTableViewController.m */,
-				C7A65D551BAAD4CF00B5CBA5 /* JHBCategoryViewController.h */,
-				C7A65D561BAAD4CF00B5CBA5 /* JHBCategoryViewController.m */,
-				C7A65D581BAAD4F300B5CBA5 /* JHBFavourateViewController.h */,
-				C7A65D591BAAD4F300B5CBA5 /* JHBFavourateViewController.m */,
-				C7A65D5A1BAAD4F300B5CBA5 /* JHBOrderViewController.h */,
-				C7A65D5B1BAAD4F300B5CBA5 /* JHBOrderViewController.m */,
+				C781C9901BECE74900AE1F2E /* JHBMe.storyboard */,
+				C781C9911BECE74900AE1F2E /* JHBMeEditViewController.h */,
+				C781C9921BECE74900AE1F2E /* JHBMeEditViewController.m */,
+				C781C9931BECE74900AE1F2E /* JHBMeMainViewController.h */,
+				C781C9941BECE74900AE1F2E /* JHBMeMainViewController.m */,
+				C781C9951BECE74900AE1F2E /* JHBMeMessageViewController.h */,
+				C781C9961BECE74900AE1F2E /* JHBMeMessageViewController.m */,
+				C781C9971BECE74900AE1F2E /* JHBMeNewMessageViewController.h */,
+				C781C9981BECE74900AE1F2E /* JHBMeNewMessageViewController.m */,
+				C781C9991BECE74900AE1F2E /* JHBMeSaveViewController.h */,
+				C781C99A1BECE74900AE1F2E /* JHBMeSaveViewController.m */,
+				C781C99B1BECE74900AE1F2E /* JHBMeSetViewController.h */,
+				C781C99C1BECE74900AE1F2E /* JHBMeSetViewController.m */,
 			);
 			name = "我";
 			sourceTree = "<group>";
@@ -505,6 +544,8 @@
 		C76628EF1BA94D8500E11F12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C781C98C1BECE6F600AE1F2E /* 我 */,
+				C781C9651BECDEBB00AE1F2E /* 工具 */,
 				C705ADCC1BE7057C00E84C74 /* 主页 */,
 				C79864441BD64172006B39DE /* 论坛 */,
 			);
@@ -536,6 +577,114 @@
 				C7E568D81BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		C781C9531BECDE5400AE1F2E /* 座位安排 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C95F1BECDE9B00AE1F2E /* JHBSeat.h */,
+				C781C9601BECDE9B00AE1F2E /* JHBSeat.m */,
+				C781C9611BECDE9B00AE1F2E /* JHBSeatFrameModel.h */,
+				C781C9621BECDE9B00AE1F2E /* JHBSeatFrameModel.m */,
+			);
+			name = "座位安排";
+			sourceTree = "<group>";
+		};
+		C781C9541BECDE6000AE1F2E /* 恋爱旅程 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9591BECDE8E00AE1F2E /* JHBStory.h */,
+				C781C95A1BECDE8E00AE1F2E /* JHBStory.m */,
+				C781C95B1BECDE8E00AE1F2E /* JHBStoryFrameModel.h */,
+				C781C95C1BECDE8E00AE1F2E /* JHBStoryFrameModel.m */,
+			);
+			name = "恋爱旅程";
+			sourceTree = "<group>";
+		};
+		C781C9551BECDE6B00AE1F2E /* 婚礼策划 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9561BECDE8100AE1F2E /* JHBPlaning.h */,
+				C781C9571BECDE8100AE1F2E /* JHBPlaning.m */,
+			);
+			name = "婚礼策划";
+			sourceTree = "<group>";
+		};
+		C781C9651BECDEBB00AE1F2E /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9531BECDE5400AE1F2E /* 座位安排 */,
+				C781C9541BECDE6000AE1F2E /* 恋爱旅程 */,
+				C781C9551BECDE6B00AE1F2E /* 婚礼策划 */,
+			);
+			name = "工具";
+			sourceTree = "<group>";
+		};
+		C781C9681BECDF1D00AE1F2E /* 工具主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C96D1BECDF6300AE1F2E /* JHBToolsViewController.h */,
+				C781C96E1BECDF6300AE1F2E /* JHBToolsViewController.m */,
+			);
+			name = "工具主页";
+			sourceTree = "<group>";
+		};
+		C781C9691BECDF2700AE1F2E /* 良辰吉日 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9701BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.h */,
+				C781C9711BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.m */,
+			);
+			name = "良辰吉日";
+			sourceTree = "<group>";
+		};
+		C781C96A1BECDF3400AE1F2E /* 婚礼策划 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9731BECDF7F00AE1F2E /* JHBToolsPlaningViewController.h */,
+				C781C9741BECDF7F00AE1F2E /* JHBToolsPlaningViewController.m */,
+			);
+			name = "婚礼策划";
+			sourceTree = "<group>";
+		};
+		C781C96B1BECDF3C00AE1F2E /* 恋爱旅程 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9761BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.h */,
+				C781C9771BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.m */,
+				C781C9781BECDF9900AE1F2E /* JHBToolsOurStoryViewController.h */,
+				C781C9791BECDF9900AE1F2E /* JHBToolsOurStoryViewController.m */,
+			);
+			name = "恋爱旅程";
+			sourceTree = "<group>";
+		};
+		C781C96C1BECDF4400AE1F2E /* 座位安排 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C97C1BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.h */,
+				C781C97D1BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.m */,
+				C781C97E1BECDFAA00AE1F2E /* JHBToolsSeatingViewController.h */,
+				C781C97F1BECDFAA00AE1F2E /* JHBToolsSeatingViewController.m */,
+			);
+			name = "座位安排";
+			sourceTree = "<group>";
+		};
+		C781C9821BECE18B00AE1F2E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C781C9831BECE1AF00AE1F2E /* CoreDataMngTool.h */,
+				C781C9841BECE1AF00AE1F2E /* CoreDataMngTool.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		C781C98C1BECE6F600AE1F2E /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				C781C98D1BECE71500AE1F2E /* JHBMeMessageModel.h */,
+				C781C98E1BECE71500AE1F2E /* JHBMeMessageModel.m */,
+			);
+			name = "我";
 			sourceTree = "<group>";
 		};
 		C7852BF61BE996100026AFB3 /* FrameWork */ = {
@@ -580,9 +729,10 @@
 		C7A65D481BAAC7D500B5CBA5 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
-				C7A65D4E1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib */,
-				C7A65D4A1BAAC81200B5CBA5 /* JHBMeFavourateView.h */,
-				C7A65D4B1BAAC81200B5CBA5 /* JHBMeFavourateView.m */,
+				C781C9861BECE6F000AE1F2E /* JHBMeMarriedDateView.h */,
+				C781C9871BECE6F000AE1F2E /* JHBMeMarriedDateView.m */,
+				C781C9881BECE6F000AE1F2E /* JHBMeUserNameView.h */,
+				C781C9891BECE6F000AE1F2E /* JHBMeUserNameView.m */,
 			);
 			name = "我";
 			sourceTree = "<group>";
@@ -702,14 +852,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C729B04D1BA91593006E9775 /* LaunchScreen.xib in Resources */,
+				C781C9501BECDE3B00AE1F2E /* JHBToolsPraiseView.xib in Resources */,
+				C781C9671BECDF1400AE1F2E /* JHBTools.storyboard in Resources */,
 				C729B0741BA91E3B006E9775 /* JHBForum.storyboard in Resources */,
-				C7A65D4F1BAAD44A00B5CBA5 /* JHBMeFavourateView.xib in Resources */,
 				C729B04A1BA91593006E9775 /* Images.xcassets in Resources */,
-				C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */,
-				C705ADD81BE7598900E84C74 /* JHBToolsPraiseView.xib in Resources */,
+				C781C99D1BECE74900AE1F2E /* JHBMe.storyboard in Resources */,
 				C7F5317B1BEC99FD0099159F /* JHBLoginStoryboard.storyboard in Resources */,
 				C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */,
-				C705ADE81BE75A9500E84C74 /* JHBTools.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,46 +909,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A65D5D1BAAD4F300B5CBA5 /* JHBOrderViewController.m in Sources */,
 				C729B03F1BA91593006E9775 /* AppDelegate.m in Sources */,
 				C7E568CD1BE8602600C1F3F5 /* JHBHomeHeaderView.m in Sources */,
-				C705ADEF1BE75A9500E84C74 /* JHBToolsViewController.m in Sources */,
 				C7852C271BE9F60B0026AFB3 /* JHBHomeModel.m in Sources */,
-				C7A65D4D1BAAC81200B5CBA5 /* JHBMeFavourateView.m in Sources */,
+				C781C9A01BECE74900AE1F2E /* JHBMeMessageViewController.m in Sources */,
+				C781C97A1BECDF9900AE1F2E /* JHBToolsLoveJourneyViewController.m in Sources */,
+				C781C94E1BECDE3B00AE1F2E /* JHBToolsPlaningButton.m in Sources */,
+				C781C95E1BECDE8E00AE1F2E /* JHBStoryFrameModel.m in Sources */,
+				C781C9581BECDE8100AE1F2E /* JHBPlaning.m in Sources */,
+				C781C9721BECDF7200AE1F2E /* JHBToolsLuckyDateViewController.m in Sources */,
 				C7E568D91BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.m in Sources */,
+				C781C9851BECE1AF00AE1F2E /* CoreDataMngTool.m in Sources */,
+				C781C97B1BECDF9900AE1F2E /* JHBToolsOurStoryViewController.m in Sources */,
 				C78AA06F1BAC172C000E86A0 /* JHBSystemInvitationTableViewController.m in Sources */,
+				C781C9801BECDFAA00AE1F2E /* JHBToolsAddSeatingViewController.m in Sources */,
+				C781C98F1BECE71500AE1F2E /* JHBMeMessageModel.m in Sources */,
+				C781C9521BECDE3B00AE1F2E /* JHBToolsStoryViewCell.m in Sources */,
 				C7A9B0B41BCD268700F3F6A0 /* JHBPersonBarTableViewCell.m in Sources */,
+				C781C99E1BECE74900AE1F2E /* JHBMeEditViewController.m in Sources */,
 				C7BBFBA21BB172860004C1B9 /* NSString+MoreExtentions.m in Sources */,
-				C705ADEC1BE75A9500E84C74 /* JHBToolsPlaningTextViewController.m in Sources */,
-				C705ADD71BE7598900E84C74 /* JHBToolsPraiseView.m in Sources */,
-				C705ADEB1BE75A9500E84C74 /* JHBToolsOurStoryViewController.m in Sources */,
-				C7A65D541BAAD4A600B5CBA5 /* JHBMeTableViewController.m in Sources */,
-				C705ADE91BE75A9500E84C74 /* JHBToolsAddSeatingViewController.m in Sources */,
+				C781C9751BECDF7F00AE1F2E /* JHBToolsPlaningViewController.m in Sources */,
+				C781C9631BECDE9B00AE1F2E /* JHBSeat.m in Sources */,
 				C7852C2A1BE9F7FE0026AFB3 /* JHBPersonModel.m in Sources */,
 				C729B0421BA91593006E9775 /* WeddingDemo.xcdatamodeld in Sources */,
+				C781C99F1BECE74900AE1F2E /* JHBMeMainViewController.m in Sources */,
 				C75B24B41BD5195A00A7FD80 /* JHBPersonInvitationTableViewController.m in Sources */,
 				C705ADCB1BE7041C00E84C74 /* JHBHomePageTableViewCell.m in Sources */,
-				C705ADD61BE7598900E84C74 /* JHBToolsButton.m in Sources */,
+				C781C98A1BECE6F000AE1F2E /* JHBMeMarriedDateView.m in Sources */,
 				C7852C2D1BEA27910026AFB3 /* NSString+DateTransform.m in Sources */,
 				C75B24B11BD50F8A00A7FD80 /* UICollectionViewCellPhoto.m in Sources */,
 				C7E568CA1BE85DE000C1F3F5 /* JHBAdPageView.m in Sources */,
+				C781C9641BECDE9B00AE1F2E /* JHBSeatFrameModel.m in Sources */,
 				C7E568C51BE8474500C1F3F5 /* JHBHomeShopViewController.m in Sources */,
 				C7852C231BE9B3710026AFB3 /* JHBPersonFrameModel.m in Sources */,
+				C781C95D1BECDE8E00AE1F2E /* JHBStory.m in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
+				C781C9A21BECE74900AE1F2E /* JHBMeSaveViewController.m in Sources */,
+				C781C9A31BECE74900AE1F2E /* JHBMeSetViewController.m in Sources */,
 				C729B03C1BA91593006E9775 /* main.m in Sources */,
+				C781C9A11BECE74900AE1F2E /* JHBMeNewMessageViewController.m in Sources */,
 				C7E568D61BE8BD0400C1F3F5 /* JHBWebViewController.m in Sources */,
-				C7A65D5C1BAAD4F300B5CBA5 /* JHBFavourateViewController.m in Sources */,
-				C705ADEA1BE75A9500E84C74 /* JHBToolsLoveJourneyViewController.m in Sources */,
+				C781C94D1BECDE3B00AE1F2E /* JHBToolsButton.m in Sources */,
+				C781C9811BECDFAA00AE1F2E /* JHBToolsSeatingViewController.m in Sources */,
 				C705ADF31BE75B3C00E84C74 /* JHBOpenPageViewController.m in Sources */,
 				C75B24AF1BD50F8A00A7FD80 /* RRMessageModel.m in Sources */,
 				C75B24B01BD50F8A00A7FD80 /* RRSendMessageViewController.m in Sources */,
 				C7A65D6F1BAAD5EB00B5CBA5 /* UIView+Extension.m in Sources */,
-				C7A65D571BAAD4CF00B5CBA5 /* JHBCategoryViewController.m in Sources */,
-				C705ADEE1BE75A9500E84C74 /* JHBToolsSeatingViewController.m in Sources */,
 				C7C1EC561BB2A3D200B58466 /* JHBForumViewController.m in Sources */,
 				C705ADC51BE6F54C00E84C74 /* JHBHomePageTableViewController.m in Sources */,
 				C75B24AE1BD50F8A00A7FD80 /* RRCustomScrollView.m in Sources */,
-				C705ADED1BE75A9500E84C74 /* JHBToolsPlaningViewController.m in Sources */,
+				C781C96F1BECDF6300AE1F2E /* JHBToolsViewController.m in Sources */,
+				C781C94F1BECDE3B00AE1F2E /* JHBToolsPraiseView.m in Sources */,
+				C781C9511BECDE3B00AE1F2E /* JHBToolsSeatViewCell.m in Sources */,
+				C781C98B1BECE6F000AE1F2E /* JHBMeUserNameView.m in Sources */,
 				C705ADFA1BE7800100E84C74 /* JHBSystemBarModel.m in Sources */,
 				C7F5317D1BEC99FD0099159F /* JHBResginViewController.m in Sources */,
 				C7F5317C1BEC99FD0099159F /* JHBLoginViewController.m in Sources */,

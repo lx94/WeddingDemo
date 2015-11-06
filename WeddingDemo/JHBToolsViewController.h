@@ -10,6 +10,9 @@
 #import "UIView+Extension.h"
 #import "JHBToolsPraiseView.h"
 #import "JHBToolsButton.h"
+#import "JHBToolsLuckyDateViewController.h"
+#import "JHBToolsSeatingViewController.h"
+#import "JHBToolsLoveJourneyViewController.h"
 
 @interface JHBToolsViewController : UIViewController<JHBToolsPraiseViewDelegate>
 

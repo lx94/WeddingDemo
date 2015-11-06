@@ -30,5 +30,15 @@
 }
 
 
++(void)showTipToWindow:(NSString *)tip afterDelay:(NSTimeInterval)timer
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = tip;
+    hud.yOffset = ([UIScreen mainScreen].bounds.size.height/2.f)/2.f;
+    [hud hide:YES afterDelay:2.f];
+}
+
+
 
 @end

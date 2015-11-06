@@ -7,6 +7,7 @@
 //
 
 #import "JHBToolsOurStoryViewController.h"
+#import "JHBToolsLoveJourneyViewController.h"
 
 #define XMargin 5.f
 #define KMargin 20.f
@@ -26,8 +27,8 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightAddClick)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+//    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(rightAddClick)];
+//    self.navigationItem.rightBarButtonItem = rightButton;
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(leftAddClick)];
     self.navigationItem.leftBarButtonItem = leftButton;
@@ -55,10 +56,10 @@
     [self.view endEditing:YES];
 }
 
-- (void)rightAddClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//- (void)rightAddClick
+//{
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
 
 - (void)leftAddClick
 {
@@ -130,33 +131,50 @@
     saveButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [saveButton setTitleColor:[UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1] forState:UIControlStateNormal];
     [saveButton setTitleColor:[UIColor colorWithRed:111.f/255.f green:44.f/255.f blue:37.f/255.f alpha:1] forState:UIControlStateHighlighted];
-    [saveButton addTarget:self action:@selector(saveButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [saveButton addTarget:self action:@selector(saveButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     _saveButton = saveButton;
     [self.view addSubview:_saveButton];
-    
-//    UILabel *prompt = [[UILabel alloc]init];
-//    prompt.text = @"请在这里写下你们的爱情故事";
-//    prompt.textAlignment = NSTextAlignmentCenter;
-//    prompt.textColor = [UIColor colorWithRed:196.f/255.f green:196.f/255.f blue:202.f/255.f alpha:1];
-//    prompt.font = TEXTFONT;
-//    prompt.frame = CGRectMake(storyLeftLine.right, storyOnLine.bottom + KMargin, story.width, name.height);
-//    [prompt bringSubviewToFront:_story];
-//    if (story.text.length == 0)
-//    {
-//        [self.view addSubview:prompt];
-//    }
-//    else
-//    {
-//        prompt.hidden = YES;
-//    }
 }
 
-- (void)saveButtonClick
+- (void)saveButtonClick:(NSArray *)array
 {
+    if ([_delegate respondsToSelector:@selector(toolsOurStoryViewDelegate:)])
+    {
+        [_delegate toolsOurStoryViewDelegate:array];
+    }
     NSLog(@"...");
+    PFObject * object = [PFObject objectWithClassName:@"JHBToolsStory"];
+    [object setObject:_storyName.text forKey:@"name"];
+    [object setObject:_story.text forKey:@"text"];
+    
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+     {
+         if (!succeeded)
+         {
+             //Go back to the wall
+             NSString *errorString = [[error userInfo] objectForKey:@"error"];
+             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+             [errorAlertView show];
+         }
+         else
+         {
+             UIAlertView *alterView = [[UIAlertView alloc]initWithTitle:@"添加成功" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+             [alterView show];
+             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                 PFQuery * query = [PFQuery queryWithClassName:@"JHBToolsStory"];
+//                 [query findObjectsInBackgroundWithBlock:^(NSArray * objects,NSError * error){
+//                     if(!error){
+//                         NSLog(@"%@",objects);
+//                         [CoreDataMngTool searchAllStroyLists] = objects;
+                         [self.navigationController popViewControllerAnimated:YES];
+//                }}];
+             });
+         }
+     }];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 

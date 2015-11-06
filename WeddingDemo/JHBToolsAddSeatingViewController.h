@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD.h>
 #import "UIView+Extension.h"
+#import <Parse/Parse.h>
+#import "CoreDataMngTool.h"
+#import "NSString+MoreExtentions.h"
 
 @interface JHBToolsAddSeatingViewController : UIViewController
 
 @property (weak, nonatomic) UITextField *deskID;
-@property (weak, nonatomic) UITextField *customerName;
+@property (weak, nonatomic) UITextView *customerName;
+@property (weak, nonatomic) UILabel *msgLabel;
+@property (weak, nonatomic) UIButton *saveButton;
 
 @end

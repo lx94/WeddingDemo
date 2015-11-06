@@ -14,4 +14,6 @@
 
 //将指定的提示语显示到window上去（2秒）
 + (void)showTipToWindow:(NSString *)tip;
+
++(void)showTipToWindow:(NSString *)tip afterDelay:(NSTimeInterval)timer;
 @end
