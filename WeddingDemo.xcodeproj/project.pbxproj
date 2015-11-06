@@ -39,9 +39,6 @@
 		C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */; };
 		C7852BF91BE996240026AFB3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852BF71BE996240026AFB3 /* Bolts.framework */; };
 		C7852BFA1BE996240026AFB3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852BF81BE996240026AFB3 /* Parse.framework */; };
-		C7852C001BE9972F0026AFB3 /* JHBLoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7852BFC1BE9972F0026AFB3 /* JHBLoginStoryboard.storyboard */; };
-		C7852C011BE9972F0026AFB3 /* JHBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7852BFE1BE9972F0026AFB3 /* JHBLoginViewController.m */; };
-		C7852C021BE9972F0026AFB3 /* JHBResginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7852BFF1BE9972F0026AFB3 /* JHBResginViewController.m */; };
 		C7852C051BE999A20026AFB3 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852C041BE999A20026AFB3 /* libstdc++.6.dylib */; };
 		C7852C071BE999AE0026AFB3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852C061BE999AE0026AFB3 /* CoreLocation.framework */; };
 		C7852C091BE999BD0026AFB3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7852C081BE999BD0026AFB3 /* StoreKit.framework */; };
@@ -76,6 +73,9 @@
 		C7E568CD1BE8602600C1F3F5 /* JHBHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E568CC1BE8602600C1F3F5 /* JHBHomeHeaderView.m */; };
 		C7E568D61BE8BD0400C1F3F5 /* JHBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E568D51BE8BD0400C1F3F5 /* JHBWebViewController.m */; };
 		C7E568D91BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E568D81BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.m */; };
+		C7F5317B1BEC99FD0099159F /* JHBLoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F531761BEC99FD0099159F /* JHBLoginStoryboard.storyboard */; };
+		C7F5317C1BEC99FD0099159F /* JHBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F531781BEC99FD0099159F /* JHBLoginViewController.m */; };
+		C7F5317D1BEC99FD0099159F /* JHBResginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F5317A1BEC99FD0099159F /* JHBResginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,11 +146,6 @@
 		C76628ED1BA948EE00E11F12 /* JHBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBHomeViewController.m; sourceTree = "<group>"; };
 		C7852BF71BE996240026AFB3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C7852BF81BE996240026AFB3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		C7852BFC1BE9972F0026AFB3 /* JHBLoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBLoginStoryboard.storyboard; sourceTree = "<group>"; };
-		C7852BFD1BE9972F0026AFB3 /* JHBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBLoginViewController.h; sourceTree = "<group>"; };
-		C7852BFE1BE9972F0026AFB3 /* JHBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBLoginViewController.m; sourceTree = "<group>"; };
-		C7852BFF1BE9972F0026AFB3 /* JHBResginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBResginViewController.m; sourceTree = "<group>"; };
-		C7852C031BE9974C0026AFB3 /* JHBResginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHBResginViewController.h; sourceTree = "<group>"; };
 		C7852C041BE999A20026AFB3 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		C7852C061BE999AE0026AFB3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C7852C081BE999BD0026AFB3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -204,6 +199,11 @@
 		C7E568D51BE8BD0400C1F3F5 /* JHBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBWebViewController.m; sourceTree = "<group>"; };
 		C7E568D71BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MoreExtension.h"; sourceTree = "<group>"; };
 		C7E568D81BE8DED000C1F3F5 /* MBProgressHUD+MoreExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MoreExtension.m"; sourceTree = "<group>"; };
+		C7F531761BEC99FD0099159F /* JHBLoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JHBLoginStoryboard.storyboard; sourceTree = "<group>"; };
+		C7F531771BEC99FD0099159F /* JHBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBLoginViewController.h; sourceTree = "<group>"; };
+		C7F531781BEC99FD0099159F /* JHBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBLoginViewController.m; sourceTree = "<group>"; };
+		C7F531791BEC99FD0099159F /* JHBResginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHBResginViewController.h; sourceTree = "<group>"; };
+		C7F5317A1BEC99FD0099159F /* JHBResginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHBResginViewController.m; sourceTree = "<group>"; };
 		DC57337F79B2E6D4C6CFBB25 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -550,11 +550,11 @@
 		C7852BFB1BE996C90026AFB3 /* 登陆注册 */ = {
 			isa = PBXGroup;
 			children = (
-				C7852BFC1BE9972F0026AFB3 /* JHBLoginStoryboard.storyboard */,
-				C7852BFD1BE9972F0026AFB3 /* JHBLoginViewController.h */,
-				C7852BFE1BE9972F0026AFB3 /* JHBLoginViewController.m */,
-				C7852BFF1BE9972F0026AFB3 /* JHBResginViewController.m */,
-				C7852C031BE9974C0026AFB3 /* JHBResginViewController.h */,
+				C7F531761BEC99FD0099159F /* JHBLoginStoryboard.storyboard */,
+				C7F531771BEC99FD0099159F /* JHBLoginViewController.h */,
+				C7F531781BEC99FD0099159F /* JHBLoginViewController.m */,
+				C7F531791BEC99FD0099159F /* JHBResginViewController.h */,
+				C7F5317A1BEC99FD0099159F /* JHBResginViewController.m */,
 			);
 			name = "登陆注册";
 			sourceTree = "<group>";
@@ -707,7 +707,7 @@
 				C729B04A1BA91593006E9775 /* Images.xcassets in Resources */,
 				C7A65D531BAAD4A600B5CBA5 /* JHBMe.storyboard in Resources */,
 				C705ADD81BE7598900E84C74 /* JHBToolsPraiseView.xib in Resources */,
-				C7852C001BE9972F0026AFB3 /* JHBLoginStoryboard.storyboard in Resources */,
+				C7F5317B1BEC99FD0099159F /* JHBLoginStoryboard.storyboard in Resources */,
 				C729B0761BA91E52006E9775 /* JHBHomePage.storyboard in Resources */,
 				C705ADE81BE75A9500E84C74 /* JHBTools.storyboard in Resources */,
 			);
@@ -785,7 +785,6 @@
 				C7E568CA1BE85DE000C1F3F5 /* JHBAdPageView.m in Sources */,
 				C7E568C51BE8474500C1F3F5 /* JHBHomeShopViewController.m in Sources */,
 				C7852C231BE9B3710026AFB3 /* JHBPersonFrameModel.m in Sources */,
-				C7852C011BE9972F0026AFB3 /* JHBLoginViewController.m in Sources */,
 				C76628EE1BA948EE00E11F12 /* JHBHomeViewController.m in Sources */,
 				C729B03C1BA91593006E9775 /* main.m in Sources */,
 				C7E568D61BE8BD0400C1F3F5 /* JHBWebViewController.m in Sources */,
@@ -802,7 +801,8 @@
 				C75B24AE1BD50F8A00A7FD80 /* RRCustomScrollView.m in Sources */,
 				C705ADED1BE75A9500E84C74 /* JHBToolsPlaningViewController.m in Sources */,
 				C705ADFA1BE7800100E84C74 /* JHBSystemBarModel.m in Sources */,
-				C7852C021BE9972F0026AFB3 /* JHBResginViewController.m in Sources */,
+				C7F5317D1BEC99FD0099159F /* JHBResginViewController.m in Sources */,
+				C7F5317C1BEC99FD0099159F /* JHBLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

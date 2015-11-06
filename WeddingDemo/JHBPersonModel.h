@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString * icon;
 @property (nonatomic, copy) NSString * name;
 @property (nonatomic, copy) NSString * text;
-@property (nonatomic, copy) NSString * pic;
+@property (nonatomic, copy) NSString * pics;
 @property (nonatomic, copy) NSString * time;
 @property (nonatomic, copy) NSString * count;
 

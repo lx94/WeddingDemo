@@ -34,25 +34,66 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [_window makeKeyAndVisible];
     
-    // Added Introduction View Controller
-    NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
-    //NSArray *coverImageNames = @[@"", @"", @""];
-    NSArray *backgroundImageNames = @[@"image_index_1", @"image_index_2", @"image_index_3"];
-    self.introductionView = [[JHBOpenPageViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
-    
-    [self.window addSubview:self.introductionView.view];
-    
-    __weak AppDelegate *weakSelf = self;
-    self.introductionView.didSelectedEnter = ^() {
+    //取得版本号
+    NSDictionary* dict=[[NSBundle mainBundle]infoDictionary];
+    NSString* newVersion=[dict objectForKey:@"CFBundleVersion"];
+    //2.和之前保存的app版本号进行对比 如果相同，则从主页启动。如果不同，从欢迎页进入
+    NSString* oldVersion=[[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"];
+    if (oldVersion==nil) {
+        // Added Introduction View Controller
+        NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
+        //NSArray *coverImageNames = @[@"", @"", @""];
+        NSArray *backgroundImageNames = @[@"image_index_1", @"image_index_2", @"image_index_3"];
+        self.introductionView = [[JHBOpenPageViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
+        [self.window addSubview:self.introductionView.view];
+        __weak AppDelegate *weakSelf = self;
+        self.introductionView.didSelectedEnter = ^() {
+            [weakSelf.introductionView.view removeFromSuperview];
+            weakSelf.introductionView = nil;
+            
+            UIStoryboard* storyBoard=[UIStoryboard storyboardWithName:@"JHBLoginStoryboard" bundle:nil];
+            UINavigationController* homeVC =[storyBoard instantiateViewControllerWithIdentifier:@"navigation"];
+            weakSelf.window.rootViewController = homeVC;
+            
+        };
         
-        UIStoryboard* storyBoard=[UIStoryboard storyboardWithName:@"JHBLoginStoryboard" bundle:nil];
-        UINavigationController* homeVC =[storyBoard instantiateViewControllerWithIdentifier:@"navigation"];
-        weakSelf.window.rootViewController = homeVC;
-    };
-    return YES;
+    }else{
+        if ([oldVersion isEqualToString:newVersion]) {
+            if ([[NSUserDefaults standardUserDefaults]boolForKey:@"isLogin"]==1) {
+                JHBHomeViewController* p1=[[JHBHomeViewController alloc]init];
+                self.window.rootViewController = p1;
+            }else{
+                UIStoryboard* storyBoard=[UIStoryboard storyboardWithName:@"JHBLoginStoryboard" bundle:nil];
+                UINavigationController* homeVC =[storyBoard instantiateViewControllerWithIdentifier:@"navigation"];
+                self.window.rootViewController = homeVC;
+            }
+            
+        }else{
+            // Added Introduction View Controller
+            NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
+            //NSArray *coverImageNames = @[@"", @"", @""];
+            NSArray *backgroundImageNames = @[@"image_index_1", @"image_index_2", @"image_index_3"];
+            self.introductionView = [[JHBOpenPageViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
+            [self.window addSubview:self.introductionView.view];
+            __weak AppDelegate *weakSelf = self;
+            self.introductionView.didSelectedEnter = ^() {
+                [weakSelf.introductionView.view removeFromSuperview];
+                weakSelf.introductionView = nil;
+                
+                JHBOpenPageViewController* p1=[[JHBOpenPageViewController alloc]init];
+                weakSelf.window.rootViewController = p1;
+                
+            };
+            
+            
+        }
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:newVersion forKey:@"CFBundleVersion"];
     
     
     return YES;
+    return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

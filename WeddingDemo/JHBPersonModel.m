@@ -19,10 +19,16 @@
         personModel.text = dict[@"text"];
         //personModel.time = [dict objectForKey:@"time"];
         personModel.count = dict[@"count"];
-        personModel.pic = ((PFFile *)dict[@"pic"]).url;;
-        
+        personModel.pics = ((PFFile *)dict[@"pic"]).url;;
+//        NSArray *arr = dict[@"pics"];
+//        for (int i=0; i<arr.count; i++) {
+//            PFFile *p = arr[i];
+//            [personModel.pics addObject:p.url];
+//        }
         NSDate *date = dict.createdAt;
         personModel.time = [NSString YMDHMWithDate:date];
+
+
     }
      
     return personModel;

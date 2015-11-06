@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 @property (weak, nonatomic) IBOutlet UITextField *againPwd;
+@property (weak, nonatomic) IBOutlet UITextField *cleverName;
 - (IBAction)resginClicked:(UIButton *)sender;
 - (IBAction)Again:(UIButton *)sender;
 
@@ -49,6 +50,7 @@
     PFUser * user=[PFUser user];
     user.username=_name.text;
     user.password=_pwd.text;
+    [user setObject:_cleverName.text forKey:@"cleverName"];
    // [user setObject:_name.text forKey:@"name"];
     //[user setObject:@"IOS4" forKey:@"classesName"];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -56,6 +58,8 @@
             //The registration was successful, go to the wall
             // [self performSegueWithIdentifier:@"SignupSuccesful" sender:self];
             NSLog(@"signUp sucess");
+            UIAlertView* alertView=[[UIAlertView alloc]initWithTitle:@"提示"message:@"注册成功" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+            [alertView show];
             [self performSegueWithIdentifier:@"toLogin" sender:nil];
             
         } else {

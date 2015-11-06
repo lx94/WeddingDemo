@@ -64,7 +64,7 @@
     [self.contentView addSubview:text];
     
     UIImageView *pic = [[UIImageView alloc]init];
-    _pics = pic;
+    _pic = pic;
     [self.contentView addSubview:pic];
 
     //时间
@@ -86,6 +86,7 @@
     _comment = comment;
     [self.contentView addSubview:comment];
     [comment setBackgroundImage:[UIImage imageNamed:@"icon_personBar_r"] forState:UIControlStateNormal];
+    [comment setBackgroundImage:[UIImage imageNamed:@"icon_personBar_h"] forState:UIControlStateHighlighted];
     [comment addTarget:self action:@selector(comment:) forControlEvents:UIControlEventTouchUpInside];
     //commentButton.imageView.contentMode = UIViewContentModeCenter;
     //喜欢
@@ -116,16 +117,16 @@
     
     _time.frame = self.personFrameModel.timeFrame;
     
-    if (self.personFrameModel.personModel.pic==nil||self.personFrameModel.personModel.pic.length==0)
+    if (self.personFrameModel.personModel.pics.length ==0)
     {
-        self.pics.frame=CGRectZero;
+        self.pic.frame=CGRectZero;
         _comment.frame = CGRectMake(CGRectGetMinX(_text.frame), CGRectGetMaxY(_text.frame)+kMagin, 20.f, 22.f);
         _like.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100.f, CGRectGetMinY(_comment.frame), 20.f, 22.f);
         _count.frame = self.personFrameModel.countFrame;
 
     }else{
-        _pics.frame = self.personFrameModel.picFrame;
-        _comment.frame = CGRectMake(CGRectGetMinX(_pics.frame), CGRectGetMaxY(_pics.frame)+kMagin, 20.f, 22.f);
+        _pic.frame = self.personFrameModel.picFrame;
+        _comment.frame = CGRectMake(CGRectGetMinX(_pic.frame), CGRectGetMaxY(_pic.frame)+kMagin, 20.f, 22.f);
         _like.frame = CGRectMake([UIScreen mainScreen].bounds.size.width -100.f, CGRectGetMinY(_comment.frame), 20.f, 22.f);
         _count.frame = self.personFrameModel.countFrame;
     }
@@ -136,7 +137,9 @@
 #pragma mark 点赞评论点击事件
 -(void)comment:(UIButton *)sender{
     NSLog(@"点赞");
-    
+    if ([self.delegate respondsToSelector:@selector(personBarTableViewCell:)]) {
+        [self.delegate personBarTableViewCell:self];
+    }
 }
 
 
@@ -152,8 +155,12 @@
     
     
     [self.icon sd_setImageWithURL:[NSURL URLWithString:personFrameModel.personModel.icon] placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    [self.pics sd_setImageWithURL:[NSURL URLWithString:personFrameModel.personModel.pic] placeholderImage:nil];
     
+    if (personFrameModel.personModel.pics.length != 0) {
+        [self.pic sd_setImageWithURL:[NSURL URLWithString:personFrameModel.personModel.pics]];
+    }
+    
+
     
     [self.name setText:personFrameModel.personModel.name];
     [self.text setText:personFrameModel.personModel.text];

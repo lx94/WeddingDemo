@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,11 +49,21 @@
         if (user) {
             //Open the wall
             NSLog(@"login sucess");
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+            
+            //获取用户信息
+            NSString* cleverName=[user objectForKey:@"cleverName"];
+            NSString *icon = ((PFFile *)[user objectForKey:@"icon"]).url;
+            //将申请下的用户数据存入沙盒
+            [[NSUserDefaults standardUserDefaults]setObject:cleverName
+                                                     forKey:@"cleverName"];
+            [[NSUserDefaults standardUserDefaults]setObject:_name.text forKey:@"userName"];
+            [[NSUserDefaults standardUserDefaults]setObject:_pwd.text forKey:@"password"];
+            [[NSUserDefaults standardUserDefaults]setObject:icon forKey:@"icon"];
             
             JHBHomeViewController* p1=[[JHBHomeViewController alloc]init];
             [UIApplication sharedApplication].keyWindow.rootViewController=p1;
-            //[self performSegueWithIdentifier:@"QQList1" sender:nil];
-            //[self performSegueWithIdentifier:@"LoginSuccesful" sender:self];
+            
         } else {
             //Something bad has ocurred
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
@@ -60,6 +71,8 @@
             [errorAlertView show];
         }
     }];
+    
+    
 }
 #pragma mark 用户注册
 - (IBAction)resgin:(UIButton *)sender {

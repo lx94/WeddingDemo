@@ -40,7 +40,7 @@
     _textFrame = CGRectMake(CGRectGetMinX(_nameFrame), CGRectGetMaxY(_nameFrame)+kMagin, [UIScreen mainScreen].bounds.size.width-kMagin-CGRectGetMinX(_nameFrame), [personModel.text heightForWidth:[UIScreen mainScreen].bounds.size.width-kMagin-CGRectGetMinX(_nameFrame) Font:kBigFont]);
     
     //图片frame
-    if (personModel.pic==nil||personModel.pic.length==0)
+    if (personModel.pics.length == 0)
     {
         _picFrame=CGRectZero;
         //点赞数frame

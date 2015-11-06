@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHBPersonBarTableViewCell.h"
 
-@interface JHBPersonInvitationTableViewController : UITableViewController
+@interface JHBPersonInvitationTableViewController : UITableViewController<JHBPersonBarTableViewCellDelegate>
 
+@property (copy,nonatomic) NSString *icon;
+@property (copy,nonatomic) NSString *userName;
 @end
