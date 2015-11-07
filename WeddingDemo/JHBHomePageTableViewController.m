@@ -9,7 +9,6 @@
 #import "JHBHomePageTableViewController.h"
 #import "JHBHomePageTableViewCell.h"
 #import "JHBHomeHeaderView.h"
-
 @interface JHBHomePageTableViewController ()
 @property(strong,nonatomic)NSMutableArray * homes;
 
@@ -21,6 +20,8 @@
     [super viewDidLoad];
     
     self.tableView.showsVerticalScrollIndicator = NO;
+    
+    self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     JHBHomeHeaderView *headerView = [JHBHomeHeaderView homeHeaderView];
@@ -30,8 +31,9 @@
     [headerView.pageView startAdsWithBlock:@[@"m1",@"m2"] block:^(NSInteger clickIndex){
         NSLog(@"%d",(int)clickIndex);
     }];
-
+    
     self.tableView.tableHeaderView = headerView;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +46,7 @@
                           @"des":@"我最好？",
                           @"name":@"啥意思？",
                           @"count":@"1200"};
-    JHBHomeModel * home=[JHBHomeModel homePageWithDict:dict];
+    JHBHome * home=[JHBHome homePageWithDict:dict];
     for (int i=0; i<=9; i++) {
         [_homes addObject:home];
     }
@@ -63,15 +65,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return self.homes.count;
+    return 10;//self.homes.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JHBHomePageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeCell" forIndexPath:indexPath];
     
-    cell.homeModel=self.homes[indexPath.row];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.home=self.homes[indexPath.row];
+    
     
     return cell;
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kYg-GF-rWm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfu-yX-6tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="482.5"/>
+            <point key="canvasLocation" x="-226.5" y="464.5"/>
         </scene>
         <!--店家简介-->
         <scene sceneID="YNB-fb-kj0">
@@ -119,24 +119,43 @@
                     <view key="view" contentMode="scaleToFill" id="mOB-w1-ePi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXG-6x-bhl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <connections>
-                                    <outlet property="delegate" destination="FPG-yn-SbZ" id="VkI-J2-n3G"/>
-                                </connections>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="scrollView" destination="NXG-6x-bhl" id="r16-gr-QPO"/>
+                        <segue destination="Noe-ex-ZJa" kind="show" identifier="totableview" id="ePU-Bl-k4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFM-2s-Uw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577.5" y="482.5"/>
+            <point key="canvasLocation" x="203.5" y="458.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="08p-u2-Pw2">
+            <objects>
+                <tableViewController id="Noe-ex-ZJa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="899-1t-8Lr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QkQ-mL-78t">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QkQ-mL-78t" id="sXX-2X-2lH">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Noe-ex-ZJa" id="tDA-h8-Xuh"/>
+                            <outlet property="delegate" destination="Noe-ex-ZJa" id="scM-YI-27s"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkU-ND-zOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820.5" y="418.5"/>
         </scene>
         <!--主页-->
         <scene sceneID="sQL-Ob-uQu">
@@ -153,7 +172,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XM-k4-d6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-427" y="483"/>
+            <point key="canvasLocation" x="-619.5" y="426.5"/>
         </scene>
     </scenes>
     <resources>

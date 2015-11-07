@@ -29,7 +29,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 @implementation JHBSystemInvitationTableViewController
 
 -(void)setModel{
-    if ([PFUser currentUser]) {
+    //if ([PFUser currentUser]) {
         PFQuery *query = [PFQuery queryWithClassName:@"WeddingDemo"];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             //3
@@ -70,12 +70,13 @@ static NSString *const menuCellIdentifier = @"rotationCell";
             }
         }];
         
-    }
+    //}
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     [self setModel];
     
@@ -127,6 +128,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
         cell.textLabel.font = kessayFont;
         cell.textLabel.numberOfLines = [self.essayModel.essay heightForWidth:[UIScreen mainScreen].bounds.size.width Font:kessayFont]/8.f;
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

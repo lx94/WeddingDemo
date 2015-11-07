@@ -20,16 +20,16 @@
 
     // Configure the view for the selected state
 }
--(void)setHomeModel:(JHBHomeModel *)homeModel{
-    _homeModel = homeModel;
+-(void)setHome:(JHBHome *)home{
+    _home=home;
     
-    [_HomePic setImage:[UIImage imageNamed:homeModel.pic]];
+    [_HomePic setImage:[UIImage imageNamed:home.pic]];
     
-    _HomeName.text = homeModel.name;
+    _HomeName.text = home.name;
     
-    _HomeDes.text = homeModel.des;
+    _HomeDes.text = home.des;
     
-    _HomeCount.text = homeModel.count;
+    _HomeCount.text = home.count;
     
     
 }

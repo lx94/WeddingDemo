@@ -13,7 +13,7 @@
 #define kbuttonWith 80.f
 #define zhenaiNewUrl @"http://www.zhenai.com"
 #define xijieNewUrl @"http://www.likewed.com"
-#define jiujiuNewUrl @"http://www.99wed.com"
+#define jiujiuNewUrl @"http://www.lovewith.me"
 #define hunqingNewUrl @"http://www.wedding86.com"
 #define buttontextColor [UIColor colorWithRed:241.f/255.f green:89.f/255.f blue:71.f/255.f alpha:1]
 
@@ -57,8 +57,8 @@
     // 消除block强引用
     __typeof (self) __weak weakSelf = self;
     
-    REMenuItem *jiujiuItem = [[REMenuItem alloc] initWithTitle:@"久久结婚"
-                                                     subtitle:@"中国第一结婚门户网"
+    REMenuItem *jiujiuItem = [[REMenuItem alloc] initWithTitle:@"婚礼时光"
+                                                     subtitle:@"关注婚礼的一切，分享最美好的时光"
                                                         image:nil
                                              highlightedImage:nil
                                                        action:^(REMenuItem *item) {

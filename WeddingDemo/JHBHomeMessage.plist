@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>comment</key>
+		<array>
+			<dict>
+				<key>commenttime</key>
+				<string>2015-10-11</string>
+				<key>commentname</key>
+				<string>于礼</string>
+				<key>commentmessage</key>
+				<string>我鑫就是英俊潇洒帅呆酷毙</string>
+			</dict>
+			<dict>
+				<key>commenttime</key>
+				<string>2014-12-14</string>
+				<key>commentname</key>
+				<string>阿牛</string>
+				<key>commentmessage</key>
+				<string>我鑫就是风流倜傥年少有为</string>
+			</dict>
+			<dict>
+				<key>commenttime</key>
+				<string>2013-12-23</string>
+				<key>commentname</key>
+				<string>姚冰</string>
+				<key>commentmessage</key>
+				<string>我鑫就是才高八斗学富五车</string>
+			</dict>
+			<dict>
+				<key>commenttime</key>
+				<string>2015-10-11</string>
+				<key>commentname</key>
+				<string>徐磊</string>
+				<key>commentmessage</key>
+				<string>我鑫就是玉树临风器宇不凡</string>
+			</dict>
+		</array>
+		<key>dress</key>
+		<string>地址：大连市甘井子区黄埔路901号东软集团</string>
+		<key>messagename</key>
+		<string>店名：隆鑫婚庆</string>
+		<key>pic</key>
+		<string>007.jpg</string>
+		<key>intro</key>
+		<string>简介：隆鑫婚庆是由随龙鑫、王珍珠、顾样、魏超投资建立的一所大型综合婚庆公司，公司历史悠久发展迅速，已经联合世纪佳缘成功为千万单身青年打造了一场又一场终身难忘的婚礼</string>
+		<key>phone</key>
+		<string>联系方式：110119120114</string>
+	</dict>
+</array>
+</plist>
