@@ -11,19 +11,15 @@
 @implementation JHBHomeView
 -(instancetype)initWithDictionary:(NSDictionary *)dict{
     if (self = [super init]) {
-        _messagename = dict[@"messagename"];
-        _dress = dict[@"dress"];
+        _messagename = dict[@"storeName"];
+        _dress = dict[@"storeDress"];
         _pic = dict[@"pic"];
-        _intro = dict[@"intro"];
-        _phone = dict[@"phone"];
-//        [self setValuesForKeysWithDictionary:dict];
-//        NSMutableArray * tempDataArray = [NSMutableArray array];
-//        for (int i = 0; i < _comment.count; i++) {
-//            JHBHomeCommentView * commentView = [JHBHomeCommentView
-//                                        commentWithDictionary:_comment[i]];
-//            [tempDataArray addObject:commentView];
-//        }
-//        _comment= tempDataArray;
+        _intro = dict[@"storeDes"];
+        _phone = dict[@"storePhone"];
+        _purpose = dict[@"storePurpose"];
+        _saveCount = dict[@"saveCount"];
+        _pic = ((PFFile *)dict[@"storePic"]).url;
+
         
     }
     return self;

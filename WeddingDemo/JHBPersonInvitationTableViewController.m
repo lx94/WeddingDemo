@@ -125,7 +125,7 @@ static int numcount = 0;
                 
                 PFObject *imageObject = [PFObject objectWithClassName:@"personBarMessage"];
                 
-                [imageObject setObject:[PFUser currentUser].username forKey:@"user"];
+                [imageObject setObject:_userName forKey:@"user"];
                 [imageObject setObject:file forKey:@"pic"];
                 [imageObject setObject:iconFile forKey:@"icon"];
                 

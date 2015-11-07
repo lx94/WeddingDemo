@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JHBHome.h"
+#import "JHBHomeView.h"
+#import <UIImageView+WebCache.h>
+
 @interface JHBHomePageTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *HomePic;
 @property (weak, nonatomic) IBOutlet UILabel *HomeName;
 @property (weak, nonatomic) IBOutlet UILabel *HomeDes;
 @property (weak, nonatomic) IBOutlet UILabel *HomeCount;
 
-@property (strong,nonatomic)JHBHome * home;
+@property (strong,nonatomic)JHBHomeView * home;
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHBHomeView.h"
 
 @interface JHBHomeShopViewController : UIViewController
 
-
+@property (strong,nonatomic) JHBHomeView *shopModel;
 @end

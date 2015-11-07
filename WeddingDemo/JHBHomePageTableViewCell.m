@@ -8,6 +8,7 @@
 
 #import "JHBHomePageTableViewCell.h"
 
+
 @implementation JHBHomePageTableViewCell
 
 - (void)awakeFromNib {
@@ -20,16 +21,17 @@
 
     // Configure the view for the selected state
 }
--(void)setHome:(JHBHome *)home{
+-(void)setHome:(JHBHomeView *)home{
     _home=home;
     
-    [_HomePic setImage:[UIImage imageNamed:home.pic]];
+    [_HomePic sd_setImageWithURL:[NSURL URLWithString:home.pic] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    //[_HomePic setImage:[UIImage imageNamed:home.pic]];
     
-    _HomeName.text = home.name;
+    _HomeName.text = home.messagename;
     
-    _HomeDes.text = home.des;
+    _HomeDes.text = home.purpose;
     
-    _HomeCount.text = home.count;
+    _HomeCount.text = home.saveCount;
     
     
 }

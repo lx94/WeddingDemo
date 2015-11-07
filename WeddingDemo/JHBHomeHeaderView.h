@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "JHBAdPageView.h"
 
+@class JHBHomeHeaderView;
+@protocol JHBHomeHeaderViewDelegate <NSObject>
+
+@optional
+-(void)homeHeaderView:(JHBHomeHeaderView *)view didSendWithButton:(NSString *)sender;
+
+@end
+
 @interface JHBHomeHeaderView : UIView
 
 +(instancetype)homeHeaderView;
@@ -29,5 +37,7 @@
 @property (weak,nonatomic) JHBAdPageView *pageView;
 //间隔
 @property (weak,nonatomic) UILabel *midLcbel;
+
+@property (weak,nonatomic) id<JHBHomeHeaderViewDelegate>delegate;
 
 @end

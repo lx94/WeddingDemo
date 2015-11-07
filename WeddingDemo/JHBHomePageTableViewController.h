@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "JHBHomeHeaderView.h"
 
-@interface JHBHomePageTableViewController : UITableViewController
+@interface JHBHomePageTableViewController : UITableViewController<JHBHomeHeaderViewDelegate>
 
 @end

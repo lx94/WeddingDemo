@@ -9,6 +9,7 @@
 #import "JHBHomeViewView.h"
 #import "JHBHomeView.h"
 #import "NSString+MoreExtentions.h"
+#import <UIImageView+WebCache.h>
 
 #define kTextSize [UIFont systemFontOfSize:16.f]
 #define leftPadding 10
@@ -59,8 +60,7 @@
     commentButton.backgroundColor = [UIColor blueColor];
     [self addSubview:commentButton];
     
-    NSLog(@"num is %zi",self.subviews.count);
-    
+        
     return self;
 }
 -(void)btnClick:(UIButton *)btn{
@@ -79,7 +79,7 @@
     //图片尺寸
     
     width = [UIScreen mainScreen].bounds.size.width;
-    height = 150;
+    height = 210;
     _picImgView.frame = CGRectMake(0, 0, width, height);
     
     //名字尺寸
@@ -116,16 +116,15 @@
         X = topPadding;
     Y = CGRectGetMaxY(_phoneLabel.frame) + centerPadding;
     _commentButton.frame = CGRectMake(0, Y, [UIScreen mainScreen].bounds.size.width, 44.f);
-//    X = topPadding;
-//    Y = CGRectGetMaxY(_phoneLabel.frame) + centerPadding;
-//    _commentLabel.frame = CGRectMake(X, Y, [UIScreen mainScreen].bounds.size.width, 44.f);
     
  
 }
 
 -(void)setMessage:(JHBHomeView *)message{
     _message=message;
-    _picImgView.image = [UIImage imageNamed:message.pic];
+    
+    [_picImgView sd_setImageWithURL:[NSURL URLWithString:message.pic] placeholderImage:nil];
+    
     _messagenameLabel.text = message.messagename;
     _phoneLabel.text = message.phone;
     _introLabel.text = message.intro;

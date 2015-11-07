@@ -35,17 +35,7 @@
 
     [self creatscrollView];
     
-//    UIButton * commentButton = [[UIButton alloc]init];
-//    //_commentButton = commentButton;
-//    
-//    [commentButton addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-//    [commentButton setTitle:@"更多信息" forState:UIControlStateNormal];
-//    [commentButton setTitle:@"信息" forState:UIControlStateHighlighted];
-//    commentButton.backgroundColor = [UIColor blueColor];
-//    [self.view addSubview:commentButton];
-//    commentButton.frame = CGRectMake(100, 100, 100, 100);
-//    
-//    NSLog(@"view num is %zi",self.view.subviews.count);
+
 
 }
 
@@ -66,21 +56,21 @@
     
 }
 
-- (NSArray *)merchantmessages
-{
-    if (_merchantmessages == nil) {
-        NSString* path =  [[NSBundle mainBundle] pathForResource:@"JHBHomeMessage.plist" ofType:nil];
-        NSArray * dataArray = [NSArray arrayWithContentsOfFile:path];
-        NSMutableArray * tempArray = [NSMutableArray array];
-        for (int i = 0; i < dataArray.count; i++) {
-             JHBHomeView * message = [JHBHomeView messageWithDictionary:dataArray[i]] ;
-            
-            [tempArray addObject:  message];
-        }
-        _merchantmessages = tempArray;
-    }
-    return _merchantmessages;
-}
+//- (NSArray *)merchantmessages
+//{
+//    if (_merchantmessages == nil) {
+//        NSString* path =  [[NSBundle mainBundle] pathForResource:@"JHBHomeMessage.plist" ofType:nil];
+//        NSArray * dataArray = [NSArray arrayWithContentsOfFile:path];
+//        NSMutableArray * tempArray = [NSMutableArray array];
+//        for (int i = 0; i < dataArray.count; i++) {
+//             JHBHomeView * message = [JHBHomeView messageWithDictionary:dataArray[i]] ;
+//            
+//            [tempArray addObject:  message];
+//        }
+//        _merchantmessages = tempArray;
+//    }
+//    return _merchantmessages;
+//}
 
 
 - (void)creatscrollView{
@@ -96,7 +86,7 @@
     //创建商家view
     JHBHomeViewView* shopview=[JHBHomeViewView JHBHomeViewView];
     shopview.frame = CGRectMake(0,0,[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
-    shopview.message=self.merchantmessages[0];
+    shopview.message=_shopModel;
     [scrollView addSubview:shopview];
     [shopview bringSubviewToFront:self.view];
     shopview.delegate = self;
